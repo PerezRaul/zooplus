@@ -1,12 +1,18 @@
+<?php
+
+	conexion = mysqli_connect('localhost','root','','bd_botiga_animals');
+
+    sql = mysql_query('conexion','')
+
+
+
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0022)http://www.zooplus.es/ -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" class=" dk_fouc"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<!-- CSS DEL PROYECTO -->
-<link rel="stylesheet" type="text/css" media="screen" href="./css/proyectoDAW2.css">
-<!-- FIN CSS DEL PROYECTO -->
-
 <link rel="stylesheet" type="text/css" media="screen" href="./css/web-styles.css">
 <link rel="stylesheet" type="text/css" media="screen" href="./css/web-styles-shop5.css">
 <link rel="stylesheet" type="text/css" media="screen" href="./css/flyoutNavigation.css">
@@ -26,7 +32,7 @@
 <link media="handheld" rel="alternate" href="http://m.zooplus.es/web/shop/homepage.htm">
 <link rel="SHORTCUT ICON" href="http://www.zooplus.es/favicon.ico">
 
-<title>Accesorios y alimentos para mascotas, tienda para mascotas online zooplus</title>
+<title>Mascotas perdidas - Zooplus</title>
 
 <meta http-equiv="Language" content="es,spanish">
 <meta name="Author" content="zooplus AG">
@@ -48,7 +54,7 @@
 
 <!-- certona.jsp -->
 
-    <script type="text/html" id="productreco-template-variants">
+<script type="text/html" id="productreco-template-variants">
     <ul>
         {{each items}}
         <li class="variant-box">
@@ -149,33 +155,25 @@
 
 
 
-    <script type="text/javascript" language="javascript" src="./image/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" language="javascript" src="./image/resonanceProductReco.js"></script>
+<script type="text/javascript" language="javascript" src="./image/jquery.tmpl.min.js"></script>
+<script type="text/javascript" language="javascript" src="./image/resonanceProductReco.js"></script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
                 var certona = {
                     "pagetype" : "HOME",
                     "customerid" : readCookie('cid') 
-                                    
-                    
                 };
-            
-        
 
-        var mediaServerDomainUrl = "http://media11.mediazs.com/theme/zooplus/zooplus.es",
-            mediaServerHostName = "media.mediazs.com"
-            locale = "es_ES";
+                var mediaServerDomainUrl = "http://media11.mediazs.com/theme/zooplus/zooplus.es",
+                    mediaServerHostName = "media.mediazs.com"
+                    locale = "es_ES";
 
     </script>
-
-
-
 
 <div id="page_margins">
     
 <div id="page">
-
     
 <div id="navigation">
 
@@ -224,8 +222,6 @@ var sortLists = {
         window.zooplusLocale = zooplusTemp;
         window.sortLists = sortingTemp;
     });
-
-
 
     var globObj = globObj || window.zooplus;
 
@@ -840,11 +836,6 @@ Buscar producto            </h3>
                                     </ul>
                                 </div>
                                 
-    
-    
-    
-    
-
                         <div class="col">
                             <!-- Invisible Headline for Structure &amp; Navigation reasons -->
                             <h3 class="invisible">
@@ -920,11 +911,7 @@ Ofertas del día                            </h3>
                                         </li>
                                     </ul>
                                 </div>
-                                
-    
-    
-    
-
+ 
                         <div class="col">
                             <!-- Invisible Headline for Structure &amp; Navigation reasons -->
                             <h3 class="invisible">
@@ -994,9 +981,6 @@ Ofertas del día                            </h3>
 
             </div>
 
-
-
-
             <div class="nav-element">
                 <div class="nav-tab last theme_offers noborder                 
 " data-toplevelcategory="offers" style="width: 111.55px;">
@@ -1035,9 +1019,6 @@ Ofertas del día                            </h3>
 
             </div>
 
-
-
-
 </nav></header>
 
 
@@ -1051,14 +1032,6 @@ Ofertas del día                            </h3>
     
 <div id="left-col">
         
-        
-    
-
-
-
-
-
-
 
 <div id="couponContainer">
 
@@ -1097,565 +1070,21 @@ Ofertas del día                            </h3>
 </div>
 
 
-				<div class="widget">
-				<div class="navigation-orange-middle">
-				<div class="navigation-orange-top">&nbsp;</div>
-
-				<div style="padding:0 12px 7px 12px;"><br>
-
-<!-- BOTÓN BÚSQUEDA DE ANIMALES -->
-				<div id="headerMiniCart" class="miniCart">
-
-                <a rel="nofollow" href="formulario.html" id="checkoutBtnCart" data-zta="checkoutBtnCart" target="_top" tabindex="3" class="btn primary" title="Mascotas perdidas">
-
-                    <img src="image/btnBuscar1.png" href="formulario.html" alt="Encuentra a tu perro">
-                </a>
-            </div><br>
-<!-- FIN BOTÓN BÚSQUEDA DE ANIMALES -->
-
+<div class="widget">
+	<div class="navigation-orange-middle">
+		<div class="navigation-orange-top">&nbsp;</div>
+			<div style="padding:0 12px 7px 12px;"><br>
                 <ul class="navigation" data-toplevelcategory="DOG">
-           
-                    <li>
-                       
-        <a class="navitext_big" href="http://www.zooplus.es/shop/tienda_perros">
-                Perros
-        </a>
-    
-
-                    </li>
-                    
-                        
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_perros/pienso_perros">
-                Pienso para perros
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_perros/snacks_perros">
-                Snacks y Huesos
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_perros/comida_humeda">
-                Comida húmeda
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_perros/casetas_perros">
-                Casetas y jaulas
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_perros/camas_cojines_cestas_mantas_perros">
-                Camas y mantas
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_perros/transportines_viajes">
-                Transportines y viaje
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-
-                        
-                        <li style="margin-bottom:14px">
-                            <a class="boldtext follow2 navitext_greensmall" href="http://www.zooplus.es/shop/tienda_perros">
-                                <span>
-                                    Todas las categorías
-                                </span>
-                            </a>
-                        </li>
-                    
+                    <li>hola</li>
+                    <li>q ase</li>
+                    <li>1111</li>
+                    <li>2222</li>
+                    <li>3333</li>
                 </ul>
-                
-            
-        
-            
-                <ul class="navigation" data-toplevelcategory="CAT">
-                    
-                    <li>
-                        
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_big" href="http://www.zooplus.es/shop/tienda_gatos">
-                Gatos
-        </a>
-    
-
-                    </li>
-                    
-                        
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos">
-                Pienso para gatos
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_gatos/comida_humeda">
-                Comida húmeda
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_gatos/arena_gatos">
-                Arena para gatos
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_gatos/snacks_gatos">
-                Snacks y golosinas
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                                <li>
-                                    
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_greensmall" href="http://www.zooplus.es/shop/tienda_gatos/rascadores_muebles">
-                Rascadores
-        </a>
-    
-
-                                </li>
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-
-                        
-                        <li style="margin-bottom:14px">
-                            <a class="boldtext follow2 navitext_greensmall" href="http://www.zooplus.es/shop/tienda_gatos">
-                                <span>
-                                    Todas las categorías
-                                </span>
-                            </a>
-                        </li>
-                    
-                </ul>
-                
-            
-        
-            
-                <ul class="navigation" data-toplevelcategory="FISH">
-                    
-                    <li>
-                        
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_big" href="http://www.zooplus.es/shop/tienda_peces">
-                Peces
-        </a>
-    
-
-                    </li>
-                    
-                </ul>
-                
-            
-        
-            
-                <ul class="navigation" data-toplevelcategory="SMALL_ANIMALS">
-                    
-                    <li>
-                        
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-        <a class="navitext_big" href="http://www.zooplus.es/shop/tienda_animales_pequenos">
-                Roedores y +
-        </a>
-    
-
-                    </li>
-                    
-                </ul>
-                
-            
-        
-            
-                <ul class="navigation" data-toplevelcategory="BIRDS">
-                    
-                    <li>
-                        
-
-    
-        <a class="navitext_big" href="http://www.zooplus.es/shop/tienda_pajaros">
-                Pájaros
-        </a>
-    
-
-                    </li>
-                    
-                </ul>
-                
-            
-        
-            
-                <ul class="navigation" data-toplevelcategory="REPTILE">
-                    
-                    <li>
-                        
-  
-    
-    
-        <a class="navitext_big" href="http://www.zooplus.es/shop/dieta_veterinaria">
-                Dieta Vet.
-        </a>
-    
-
-                    </li>
-                    
-                </ul>
-                
-            
-        
-            
-                <ul class="navigation" data-toplevelcategory="HORSE">
-                    
-                    <li>
-                        
-
-
-    
-        <a class="navitext_big" href="http://www.zooplus.es/shop/exclusivos">
-                ★ Exclusivos
-        </a>
-    
-
-                    </li>
-                    
-                </ul>
-                
-  
-
-<!--
--->
-
-    
+            </div>                         
+        <div class="navigation-orange-bottom">&nbsp;</div>  
     </div>
-
-    <div class="navigation-orange-bottom">&nbsp;</div>
-        
 </div>
-
-</div>
-
-
 
 <!-- Zone-Region: LEFT_MIDDLE -->
 <!-- xxzone.ftl -->
@@ -1792,716 +1221,24 @@ Ofertas del día                            </h3>
    </div>
 </div>
 
+<!-- Zone-Region: CENTER_MIDDLE_1 DONDE IRÁN LOS DATOS DEL FORMULARIO -->
 
-    <div class="zone-wrapper" style="width: 100%;">
-            
-  
-
-<!-- Zone-Region: CENTER_MIDDLE_1 -->
-<!-- xxzone.ftl -->
-        <div class="zone">
-            <script type="text/javascript">
-                <!--// <![CDATA[
-                /* [id73] */
-                if (typeof OA_show == 'function') {
-                    OA_show(73);
-                }
-                // ]]> -->
-            </script><style type="text/css">
-#homepage__new-banner #jqs_nav{
-left:0;
-right:0;
-text-align:center
-}
-#homepage__new-banner .jqs_slider{
-height:241px
-}
-#homepage__new-banner .jqs_slider a{
-width:auto !important
-}
-#homepage__new-banner .jqs_slider a img{
-width:100% !important
-}
-</style>
-<script>
-$("#contentSwitch_middleTop_false").hide();
-(function(a,b){function d(b){a.fn.cycle.debug&&e(b)}function e(){window.console&&console.log&&console.log("[cycle] "+Array.prototype.join.call(arguments," "))}function f(b,c,d){var e=a(b).data("cycle.opts"),f=!!b.cyclePause;f&&e.paused?e.paused(b,e,c,d):!f&&e.resumed&&e.resumed(b,e,c,d)}function g(c,d,g){function k(b,c,d){if(!b&&c===!0){var f=a(d).data("cycle.opts");if(!f)return e("options not found, can not resume"),!1;d.cycleTimeout&&(clearTimeout(d.cycleTimeout),d.cycleTimeout=0),n(f.elements,f,1,!f.backwards)}}c.cycleStop===b&&(c.cycleStop=0);if(d===b||d===null)d={};if(d.constructor==String){switch(d){case"destroy":case"stop":var h=a(c).data("cycle.opts");if(!h)return!1;return c.cycleStop++,c.cycleTimeout&&clearTimeout(c.cycleTimeout),c.cycleTimeout=0,h.elements&&a(h.elements).stop(),a(c).removeData("cycle.opts"),d=="destroy"&&i(c,h),!1;case"toggle":return c.cyclePause=c.cyclePause===1?0:1,k(c.cyclePause,g,c),f(c),!1;case"pause":return c.cyclePause=1,f(c),!1;case"resume":return c.cyclePause=0,k(!1,g,c),f(c),!1;case"prev":case"next":h=a(c).data("cycle.opts");if(!h)return e('options not found, "prev/next" ignored'),!1;return a.fn.cycle[d](h),!1;default:d={fx:d}}return d}if(d.constructor==Number){var j=d;return d=a(c).data("cycle.opts"),d?j<0||j>=d.elements.length?(e("invalid slide index: "+j),!1):(d.nextSlide=j,c.cycleTimeout&&(clearTimeout(c.cycleTimeout),c.cycleTimeout=0),typeof g=="string"&&(d.oneTimeFx=g),n(d.elements,d,1,j>=d.currSlide),!1):(e("options not found, can not advance slide"),!1)}return d}function h(b,c){if(!a.support.opacity&&c.cleartype&&b.style.filter)try{b.style.removeAttribute("filter")}catch(d){}}function i(b,c){c.next&&a(c.next).unbind(c.prevNextEvent),c.prev&&a(c.prev).unbind(c.prevNextEvent),(c.pager||c.pagerAnchorBuilder)&&a.each(c.pagerAnchors||[],function(){this.unbind().remove()}),c.pagerAnchors=null,a(b).unbind("mouseenter.cycle mouseleave.cycle"),c.destroy&&c.destroy(c)}function j(c,d,g,i,j){var o,s=a.extend({},a.fn.cycle.defaults,i||{},a.metadata?c.metadata():a.meta?c.data():{}),t=a.isFunction(c.data)?c.data(s.metaAttr):null;t&&(s=a.extend(s,t)),s.autostop&&(s.countdown=s.autostopCount||g.length);var u=c[0];c.data("cycle.opts",s),s.$cont=c,s.stopCount=u.cycleStop,s.elements=g,s.before=s.before?[s.before]:[],s.after=s.after?[s.after]:[],!a.support.opacity&&s.cleartype&&s.after.push(function(){h(this,s)}),s.continuous&&s.after.push(function(){n(g,s,0,!s.backwards)}),k(s),!a.support.opacity&&s.cleartype&&!s.cleartypeNoBg&&r(d),c.css("position")=="static"&&c.css("position","relative"),s.width&&c.width(s.width),s.height&&s.height!="auto"&&c.height(s.height),s.startingSlide!==b?(s.startingSlide=parseInt(s.startingSlide,10),s.startingSlide>=g.length||s.startSlide<0?s.startingSlide=0:o=!0):s.backwards?s.startingSlide=g.length-1:s.startingSlide=0;if(s.random){s.randomMap=[];for(var v=0;v<g.length;v++)s.randomMap.push(v);s.randomMap.sort(function(a,b){return Math.random()-.5});if(o)for(var w=0;w<g.length;w++)s.startingSlide==s.randomMap[w]&&(s.randomIndex=w);else s.randomIndex=1,s.startingSlide=s.randomMap[1]}else s.startingSlide>=g.length&&(s.startingSlide=0);s.currSlide=s.startingSlide||0;var x=s.startingSlide;d.css({position:"absolute",top:0,left:0}).hide().each(function(b){var c;s.backwards?c=x?b<=x?g.length+(b-x):x-b:g.length-b:c=x?b>=x?g.length-(b-x):x-b:g.length-b,a(this).css("z-index",c)}),a(g[x]).css("opacity",1).show(),h(g[x],s),s.fit&&(s.aspect?d.each(function(){var b=a(this),c=s.aspect===!0?b.width()/b.height():s.aspect;s.width&&b.width()!=s.width&&(b.width(s.width),b.height(s.width/c)),s.height&&b.height()<s.height&&(b.height(s.height),b.width(s.height*c))}):(s.width&&d.width(s.width),s.height&&s.height!="auto"&&d.height(s.height))),s.center&&(!s.fit||s.aspect)&&d.each(function(){var b=a(this);b.css({"margin-left":s.width?(s.width-b.width())/2+"px":0,"margin-top":s.height?(s.height-b.height())/2+"px":0})}),s.center&&!s.fit&&!s.slideResize&&d.each(function(){var b=a(this);b.css({"margin-left":s.width?(s.width-b.width())/2+"px":0,"margin-top":s.height?(s.height-b.height())/2+"px":0})});var y=s.containerResize&&!c.innerHeight();if(y){var z=0,A=0;for(var B=0;B<g.length;B++){var C=a(g[B]),D=C[0],E=C.outerWidth(),F=C.outerHeight();E||(E=D.offsetWidth||D.width||C.attr("width")),F||(F=D.offsetHeight||D.height||C.attr("height")),z=E>z?E:z,A=F>A?F:A}z>0&&A>0&&c.css({width:z+"px",height:A+"px"})}var G=!1;s.pause&&c.bind("mouseenter.cycle",function(){G=!0,this.cyclePause++,f(u,!0)}).bind("mouseleave.cycle",function(){G&&this.cyclePause--,f(u,!0)});if(l(s)===!1)return!1;var H=!1;i.requeueAttempts=i.requeueAttempts||0,d.each(function(){var b=a(this);this.cycleH=s.fit&&s.height?s.height:b.height()||this.offsetHeight||this.height||b.attr("height")||0,this.cycleW=s.fit&&s.width?s.width:b.width()||this.offsetWidth||this.width||b.attr("width")||0;if(b.is("img")){var c=a.browser.msie&&this.cycleW==28&&this.cycleH==30&&!this.complete,d=a.browser.mozilla&&this.cycleW==34&&this.cycleH==19&&!this.complete,f=a.browser.opera&&(this.cycleW==42&&this.cycleH==19||this.cycleW==37&&this.cycleH==17)&&!this.complete,g=this.cycleH===0&&this.cycleW===0&&!this.complete;if(c||d||f||g){if(j.s&&s.requeueOnImageNotLoaded&&++i.requeueAttempts<100)return e(i.requeueAttempts," - img slide not loaded, requeuing slideshow: ",this.src,this.cycleW,this.cycleH),setTimeout(function(){a(j.s,j.c).cycle(i)},s.requeueTimeout),H=!0,!1;e("could not determine size of image: "+this.src,this.cycleW,this.cycleH)}}return!0});if(H)return!1;s.cssBefore=s.cssBefore||{},s.cssAfter=s.cssAfter||{},s.cssFirst=s.cssFirst||{},s.animIn=s.animIn||{},s.animOut=s.animOut||{},d.not(":eq("+x+")").css(s.cssBefore),a(d[x]).css(s.cssFirst);if(s.timeout){s.timeout=parseInt(s.timeout,10),s.speed.constructor==String&&(s.speed=a.fx.speeds[s.speed]||parseInt(s.speed,10)),s.sync||(s.speed=s.speed/2);var I=s.fx=="none"?0:s.fx=="shuffle"?500:250;while(s.timeout-s.speed<I)s.timeout+=s.speed}s.easing&&(s.easeIn=s.easeOut=s.easing),s.speedIn||(s.speedIn=s.speed),s.speedOut||(s.speedOut=s.speed),s.slideCount=g.length,s.currSlide=s.lastSlide=x,s.random?(++s.randomIndex==g.length&&(s.randomIndex=0),s.nextSlide=s.randomMap[s.randomIndex]):s.backwards?s.nextSlide=s.startingSlide===0?g.length-1:s.startingSlide-1:s.nextSlide=s.startingSlide>=g.length-1?0:s.startingSlide+1;if(!s.multiFx){var J=a.fn.cycle.transitions[s.fx];if(a.isFunction(J))J(c,d,s);else if(s.fx!="custom"&&!s.multiFx)return e("unknown transition: "+s.fx,"; slideshow terminating"),!1}var K=d[x];return s.skipInitializationCallbacks||(s.before.length&&s.before[0].apply(K,[K,K,s,!0]),s.after.length&&s.after[0].apply(K,[K,K,s,!0])),s.next&&a(s.next).bind(s.prevNextEvent,function(){return p(s,1)}),s.prev&&a(s.prev).bind(s.prevNextEvent,function(){return p(s,0)}),(s.pager||s.pagerAnchorBuilder)&&q(g,s),m(s,g),s}function k(b){b.original={before:[],after:[]},b.original.cssBefore=a.extend({},b.cssBefore),b.original.cssAfter=a.extend({},b.cssAfter),b.original.animIn=a.extend({},b.animIn),b.original.animOut=a.extend({},b.animOut),a.each(b.before,function(){b.original.before.push(this)}),a.each(b.after,function(){b.original.after.push(this)})}function l(b){var c,f,g=a.fn.cycle.transitions;if(b.fx.indexOf(",")>0){b.multiFx=!0,b.fxs=b.fx.replace(/\s*/g,"").split(",");for(c=0;c<b.fxs.length;c++){var h=b.fxs[c];f=g[h];if(!f||!g.hasOwnProperty(h)||!a.isFunction(f))e("discarding unknown transition: ",h),b.fxs.splice(c,1),c--}if(!b.fxs.length)return e("No valid transitions named; slideshow terminating."),!1}else if(b.fx=="all"){b.multiFx=!0,b.fxs=[];for(var i in g)g.hasOwnProperty(i)&&(f=g[i],g.hasOwnProperty(i)&&a.isFunction(f)&&b.fxs.push(i))}if(b.multiFx&&b.randomizeEffects){var j=Math.floor(Math.random()*20)+30;for(c=0;c<j;c++){var k=Math.floor(Math.random()*b.fxs.length);b.fxs.push(b.fxs.splice(k,1)[0])}d("randomized fx sequence: ",b.fxs)}return!0}function m(b,c){b.addSlide=function(d,e){var f=a(d),g=f[0];b.autostopCount||b.countdown++,c[e?"unshift":"push"](g),b.els&&b.els[e?"unshift":"push"](g),b.slideCount=c.length,b.random&&(b.randomMap.push(b.slideCount-1),b.randomMap.sort(function(a,b){return Math.random()-.5})),f.css("position","absolute"),f[e?"prependTo":"appendTo"](b.$cont),e&&(b.currSlide++,b.nextSlide++),!a.support.opacity&&b.cleartype&&!b.cleartypeNoBg&&r(f),b.fit&&b.width&&f.width(b.width),b.fit&&b.height&&b.height!="auto"&&f.height(b.height),g.cycleH=b.fit&&b.height?b.height:f.height(),g.cycleW=b.fit&&b.width?b.width:f.width(),f.css(b.cssBefore),(b.pager||b.pagerAnchorBuilder)&&a.fn.cycle.createPagerAnchor(c.length-1,g,a(b.pager),c,b),a.isFunction(b.onAddSlide)?b.onAddSlide(f):f.hide()}}function n(c,e,f,g){function q(){var a=0,b=e.timeout;e.timeout&&!e.continuous?(a=o(c[e.currSlide],c[e.nextSlide],e,g),e.fx=="shuffle"&&(a-=e.speedOut)):e.continuous&&h.cyclePause&&(a=10),a>0&&(h.cycleTimeout=setTimeout(function(){n(c,e,0,!e.backwards)},a))}var h=e.$cont[0],i=c[e.currSlide],j=c[e.nextSlide];f&&e.busy&&e.manualTrump&&(d("manualTrump in go(), stopping active transition"),a(c).stop(!0,!0),e.busy=0,clearTimeout(h.cycleTimeout));if(e.busy){d("transition active, ignoring new tx request");return}if(h.cycleStop!=e.stopCount||h.cycleTimeout===0&&!f)return;if(!f&&!h.cyclePause&&!e.bounce&&(e.autostop&&--e.countdown<=0||e.nowrap&&!e.random&&e.nextSlide<e.currSlide)){e.end&&e.end(e);return}var k=!1;if((f||!h.cyclePause)&&e.nextSlide!=e.currSlide){k=!0;var l=e.fx;i.cycleH=i.cycleH||a(i).height(),i.cycleW=i.cycleW||a(i).width(),j.cycleH=j.cycleH||a(j).height(),j.cycleW=j.cycleW||a(j).width(),e.multiFx&&(g&&(e.lastFx===b||++e.lastFx>=e.fxs.length)?e.lastFx=0:!g&&(e.lastFx===b||--e.lastFx<0)&&(e.lastFx=e.fxs.length-1),l=e.fxs[e.lastFx]),e.oneTimeFx&&(l=e.oneTimeFx,e.oneTimeFx=null),a.fn.cycle.resetState(e,l),e.before.length&&a.each(e.before,function(a,b){if(h.cycleStop!=e.stopCount)return;b.apply(j,[i,j,e,g])});var m=function(){e.busy=0,a.each(e.after,function(a,b){if(h.cycleStop!=e.stopCount)return;b.apply(j,[i,j,e,g])}),h.cycleStop||q()};d("tx firing("+l+"); currSlide: "+e.currSlide+"; nextSlide: "+e.nextSlide),e.busy=1,e.fxFn?e.fxFn(i,j,e,m,g,f&&e.fastOnEvent):a.isFunction(a.fn.cycle[e.fx])?a.fn.cycle[e.fx](i,j,e,m,g,f&&e.fastOnEvent):a.fn.cycle.custom(i,j,e,m,g,f&&e.fastOnEvent)}else q();if(k||e.nextSlide==e.currSlide){var p;e.lastSlide=e.currSlide,e.random?(e.currSlide=e.nextSlide,++e.randomIndex==c.length&&(e.randomIndex=0,e.randomMap.sort(function(a,b){return Math.random()-.5})),e.nextSlide=e.randomMap[e.randomIndex],e.nextSlide==e.currSlide&&(e.nextSlide=e.currSlide==e.slideCount-1?0:e.currSlide+1)):e.backwards?(p=e.nextSlide-1<0,p&&e.bounce?(e.backwards=!e.backwards,e.nextSlide=1,e.currSlide=0):(e.nextSlide=p?c.length-1:e.nextSlide-1,e.currSlide=p?0:e.nextSlide+1)):(p=e.nextSlide+1==c.length,p&&e.bounce?(e.backwards=!e.backwards,e.nextSlide=c.length-2,e.currSlide=c.length-1):(e.nextSlide=p?0:e.nextSlide+1,e.currSlide=p?c.length-1:e.nextSlide-1))}k&&e.pager&&e.updateActivePagerLink(e.pager,e.currSlide,e.activePagerClass)}function o(a,b,c,e){if(c.timeoutFn){var f=c.timeoutFn.call(a,a,b,c,e);while(c.fx!="none"&&f-c.speed<250)f+=c.speed;d("calculated timeout: "+f+"; speed: "+c.speed);if(f!==!1)return f}return c.timeout}function p(b,c){var d=c?1:-1,e=b.elements,f=b.$cont[0],g=f.cycleTimeout;g&&(clearTimeout(g),f.cycleTimeout=0);if(b.random&&d<0)b.randomIndex--,--b.randomIndex==-2?b.randomIndex=e.length-2:b.randomIndex==-1&&(b.randomIndex=e.length-1),b.nextSlide=b.randomMap[b.randomIndex];else if(b.random)b.nextSlide=b.randomMap[b.randomIndex];else{b.nextSlide=b.currSlide+d;if(b.nextSlide<0){if(b.nowrap)return!1;b.nextSlide=e.length-1}else if(b.nextSlide>=e.length){if(b.nowrap)return!1;b.nextSlide=0}}var h=b.onPrevNextEvent||b.prevNextClick;return a.isFunction(h)&&h(d>0,b.nextSlide,e[b.nextSlide]),n(e,b,1,c),!1}function q(b,c){var d=a(c.pager);a.each(b,function(e,f){a.fn.cycle.createPagerAnchor(e,f,d,b,c)}),c.updateActivePagerLink(c.pager,c.startingSlide,c.activePagerClass)}function r(b){function c(a){return a=parseInt(a,10).toString(16),a.length<2?"0"+a:a}function e(b){for(;b&&b.nodeName.toLowerCase()!="html";b=b.parentNode){var d=a.css(b,"background-color");if(d&&d.indexOf("rgb")>=0){var e=d.match(/\d+/g);return"#"+c(e[0])+c(e[1])+c(e[2])}if(d&&d!="transparent")return d}return"#ffffff"}d("applying clearType background-color hack"),b.each(function(){a(this).css("background-color",e(this))})}"use strict";var c="2.9999.5";a.support===b&&(a.support={opacity:!a.browser.msie}),a.expr[":"].paused=function(a){return a.cyclePause},a.fn.cycle=function(b,c){var f={s:this.selector,c:this.context};return this.length===0&&b!="stop"?!a.isReady&&f.s?(e("DOM not ready, queuing slideshow"),a(function(){a(f.s,f.c).cycle(b,c)}),this):(e("terminating; zero elements found by selector"+(a.isReady?"":" (DOM not ready)")),this):this.each(function(){var h=g(this,b,c);if(h===!1)return;h.updateActivePagerLink=h.updateActivePagerLink||a.fn.cycle.updateActivePagerLink,this.cycleTimeout&&clearTimeout(this.cycleTimeout),this.cycleTimeout=this.cyclePause=0,this.cycleStop=0;var i=a(this),k=h.slideExpr?a(h.slideExpr,this):i.children(),l=k.get();if(l.length<2){e("terminating; too few slides: "+l.length);return}var m=j(i,k,l,h,f);if(m===!1)return;var p=m.continuous?10:o(l[m.currSlide],l[m.nextSlide],m,!m.backwards);p&&(p+=m.delay||0,p<10&&(p=10),d("first timeout: "+p),this.cycleTimeout=setTimeout(function(){n(l,m,0,!h.backwards)},p))})},a.fn.cycle.resetState=function(b,c){c=c||b.fx,b.before=[],b.after=[],b.cssBefore=a.extend({},b.original.cssBefore),b.cssAfter=a.extend({},b.original.cssAfter),b.animIn=a.extend({},b.original.animIn),b.animOut=a.extend({},b.original.animOut),b.fxFn=null,a.each(b.original.before,function(){b.before.push(this)}),a.each(b.original.after,function(){b.after.push(this)});var d=a.fn.cycle.transitions[c];a.isFunction(d)&&d(b.$cont,a(b.elements),b)},a.fn.cycle.updateActivePagerLink=function(b,c,d){a(b).each(function(){a(this).children().removeClass(d).eq(c).addClass(d)})},a.fn.cycle.next=function(a){p(a,1)},a.fn.cycle.prev=function(a){p(a,0)},a.fn.cycle.createPagerAnchor=function(b,c,e,g,h){var i;a.isFunction(h.pagerAnchorBuilder)?(i=h.pagerAnchorBuilder(b,c),d("pagerAnchorBuilder("+b+", el) returned: "+i)):i='<a href="#">'+(b+1)+"</a>";if(!i)return;var j=a(i);if(j.parents("body").length===0){var k=[];e.length>1?(e.each(function(){var b=j.clone(!0);a(this).append(b),k.push(b[0])}),j=a(k)):j.appendTo(e)}h.pagerAnchors=h.pagerAnchors||[],h.pagerAnchors.push(j);var l=function(c){c.preventDefault(),h.nextSlide=b;var d=h.$cont[0],e=d.cycleTimeout;e&&(clearTimeout(e),d.cycleTimeout=0);var f=h.onPagerEvent||h.pagerClick;a.isFunction(f)&&f(h.nextSlide,g[h.nextSlide]),n(g,h,1,h.currSlide<b)};/mouseenter|mouseover/i.test(h.pagerEvent)?j.hover(l,function(){}):j.bind(h.pagerEvent,l),!/^click/.test(h.pagerEvent)&&!h.allowPagerClickBubble&&j.bind("click.cycle",function(){return!1});var m=h.$cont[0],o=!1;h.pauseOnPagerHover&&j.hover(function(){o=!0,m.cyclePause++,f(m,!0,!0)},function(){o&&m.cyclePause--,f(m,!0,!0)})},a.fn.cycle.hopsFromLast=function(a,b){var c,d=a.lastSlide,e=a.currSlide;return b?c=e>d?e-d:a.slideCount-d:c=e<d?d-e:d+a.slideCount-e,c},a.fn.cycle.commonReset=function(b,c,d,e,f,g){a(d.elements).not(b).hide(),typeof d.cssBefore.opacity=="undefined"&&(d.cssBefore.opacity=1),d.cssBefore.display="block",d.slideResize&&e!==!1&&c.cycleW>0&&(d.cssBefore.width=c.cycleW),d.slideResize&&f!==!1&&c.cycleH>0&&(d.cssBefore.height=c.cycleH),d.cssAfter=d.cssAfter||{},d.cssAfter.display="none",a(b).css("zIndex",d.slideCount+(g===!0?1:0)),a(c).css("zIndex",d.slideCount+(g===!0?0:1))},a.fn.cycle.custom=function(b,c,d,e,f,g){var h=a(b),i=a(c),j=d.speedIn,k=d.speedOut,l=d.easeIn,m=d.easeOut;i.css(d.cssBefore),g&&(typeof g=="number"?j=k=g:j=k=1,l=m=null);var n=function(){i.animate(d.animIn,j,l,function(){e()})};h.animate(d.animOut,k,m,function(){h.css(d.cssAfter),d.sync||n()}),d.sync&&n()},a.fn.cycle.transitions={fade:function(b,c,d){c.not(":eq("+d.currSlide+")").css("opacity",0),d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d),d.cssBefore.opacity=0}),d.animIn={opacity:1},d.animOut={opacity:0},d.cssBefore={top:0,left:0}}},a.fn.cycle.ver=function(){return c},a.fn.cycle.defaults={activePagerClass:"activeSlide",after:null,allowPagerClickBubble:!1,animIn:null,animOut:null,aspect:!1,autostop:0,autostopCount:0,backwards:!1,before:null,center:null,cleartype:!a.support.opacity,cleartypeNoBg:!1,containerResize:1,continuous:0,cssAfter:null,cssBefore:null,delay:0,easeIn:null,easeOut:null,easing:null,end:null,fastOnEvent:0,fit:0,fx:"fade",fxFn:null,height:"auto",manualTrump:!0,metaAttr:"cycle",next:null,nowrap:0,onPagerEvent:null,onPrevNextEvent:null,pager:null,pagerAnchorBuilder:null,pagerEvent:"click.cycle",pause:0,pauseOnPagerHover:0,prev:null,prevNextEvent:"click.cycle",random:0,randomizeEffects:1,requeueOnImageNotLoaded:!0,requeueTimeout:250,rev:0,shuffle:null,skipInitializationCallbacks:!1,slideExpr:null,slideResize:1,speed:1e3,speedIn:null,speedOut:null,startingSlide:b,sync:1,timeout:4e3,timeoutFn:null,updateActivePagerLink:null,width:null}})(jQuery),function(a){"use strict",a.fn.cycle.transitions.none=function(b,c,d){d.fxFn=function(b,c,d,e){a(c).show(),a(b).hide(),e()}},a.fn.cycle.transitions.fadeout=function(b,c,d){c.not(":eq("+d.currSlide+")").css({display:"block",opacity:1}),d.before.push(function(b,c,d,e,f,g){a(b).css("zIndex",d.slideCount+(g!==!0?1:0)),a(c).css("zIndex",d.slideCount+(g!==!0?0:1))}),d.animIn.opacity=1,d.animOut.opacity=0,d.cssBefore.opacity=1,d.cssBefore.display="block",d.cssAfter.zIndex=0},a.fn.cycle.transitions.scrollUp=function(b,c,d){b.css("overflow","hidden"),d.before.push(a.fn.cycle.commonReset);var e=b.height();d.cssBefore.top=e,d.cssBefore.left=0,d.cssFirst.top=0,d.animIn.top=0,d.animOut.top=-e},a.fn.cycle.transitions.scrollDown=function(b,c,d){b.css("overflow","hidden"),d.before.push(a.fn.cycle.commonReset);var e=b.height();d.cssFirst.top=0,d.cssBefore.top=-e,d.cssBefore.left=0,d.animIn.top=0,d.animOut.top=e},a.fn.cycle.transitions.scrollLeft=function(b,c,d){b.css("overflow","hidden"),d.before.push(a.fn.cycle.commonReset);var e=b.width();d.cssFirst.left=0,d.cssBefore.left=e,d.cssBefore.top=0,d.animIn.left=0,d.animOut.left=0-e},a.fn.cycle.transitions.scrollRight=function(b,c,d){b.css("overflow","hidden"),d.before.push(a.fn.cycle.commonReset);var e=b.width();d.cssFirst.left=0,d.cssBefore.left=-e,d.cssBefore.top=0,d.animIn.left=0,d.animOut.left=e},a.fn.cycle.transitions.scrollHorz=function(b,c,d){b.css("overflow","hidden").width(),d.before.push(function(b,c,d,e){d.rev&&(e=!e),a.fn.cycle.commonReset(b,c,d),d.cssBefore.left=e?c.cycleW-1:1-c.cycleW,d.animOut.left=e?-b.cycleW:b.cycleW}),d.cssFirst.left=0,d.cssBefore.top=0,d.animIn.left=0,d.animOut.top=0},a.fn.cycle.transitions.scrollVert=function(b,c,d){b.css("overflow","hidden"),d.before.push(function(b,c,d,e){d.rev&&(e=!e),a.fn.cycle.commonReset(b,c,d),d.cssBefore.top=e?1-c.cycleH:c.cycleH-1,d.animOut.top=e?b.cycleH:-b.cycleH}),d.cssFirst.top=0,d.cssBefore.left=0,d.animIn.top=0,d.animOut.left=0},a.fn.cycle.transitions.slideX=function(b,c,d){d.before.push(function(b,c,d){a(d.elements).not(b).hide(),a.fn.cycle.commonReset(b,c,d,!1,!0),d.animIn.width=c.cycleW}),d.cssBefore.left=0,d.cssBefore.top=0,d.cssBefore.width=0,d.animIn.width="show",d.animOut.width=0},a.fn.cycle.transitions.slideY=function(b,c,d){d.before.push(function(b,c,d){a(d.elements).not(b).hide(),a.fn.cycle.commonReset(b,c,d,!0,!1),d.animIn.height=c.cycleH}),d.cssBefore.left=0,d.cssBefore.top=0,d.cssBefore.height=0,d.animIn.height="show",d.animOut.height=0},a.fn.cycle.transitions.shuffle=function(b,c,d){var e,f=b.css("overflow","visible").width();c.css({left:0,top:0}),d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!0,!0,!0)}),d.speedAdjusted||(d.speed=d.speed/2,d.speedAdjusted=!0),d.random=0,d.shuffle=d.shuffle||{left:-f,top:15},d.els=[];for(e=0;e<c.length;e++)d.els.push(c[e]);for(e=0;e<d.currSlide;e++)d.els.push(d.els.shift());d.fxFn=function(b,c,d,e,f){d.rev&&(f=!f);var g=f?a(b):a(c);a(c).css(d.cssBefore);var h=d.slideCount;g.animate(d.shuffle,d.speedIn,d.easeIn,function(){var c=a.fn.cycle.hopsFromLast(d,f);for(var i=0;i<c;i++)f?d.els.push(d.els.shift()):d.els.unshift(d.els.pop());if(f)for(var j=0,k=d.els.length;j<k;j++)a(d.els[j]).css("z-index",k-j+h);else{var l=a(b).css("z-index");g.css("z-index",parseInt(l,10)+1+h)}g.animate({left:0,top:0},d.speedOut,d.easeOut,function(){a(f?this:b).hide(),e&&e()})})},a.extend(d.cssBefore,{display:"block",opacity:1,top:0,left:0})},a.fn.cycle.transitions.turnUp=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!0,!1),d.cssBefore.top=c.cycleH,d.animIn.height=c.cycleH,d.animOut.width=c.cycleW}),d.cssFirst.top=0,d.cssBefore.left=0,d.cssBefore.height=0,d.animIn.top=0,d.animOut.height=0},a.fn.cycle.transitions.turnDown=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!0,!1),d.animIn.height=c.cycleH,d.animOut.top=b.cycleH}),d.cssFirst.top=0,d.cssBefore.left=0,d.cssBefore.top=0,d.cssBefore.height=0,d.animOut.height=0},a.fn.cycle.transitions.turnLeft=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!1,!0),d.cssBefore.left=c.cycleW,d.animIn.width=c.cycleW}),d.cssBefore.top=0,d.cssBefore.width=0,d.animIn.left=0,d.animOut.width=0},a.fn.cycle.transitions.turnRight=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!1,!0),d.animIn.width=c.cycleW,d.animOut.left=b.cycleW}),a.extend(d.cssBefore,{top:0,left:0,width:0}),d.animIn.left=0,d.animOut.width=0},a.fn.cycle.transitions.zoom=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!1,!1,!0),d.cssBefore.top=c.cycleH/2,d.cssBefore.left=c.cycleW/2,a.extend(d.animIn,{top:0,left:0,width:c.cycleW,height:c.cycleH}),a.extend(d.animOut,{width:0,height:0,top:b.cycleH/2,left:b.cycleW/2})}),d.cssFirst.top=0,d.cssFirst.left=0,d.cssBefore.width=0,d.cssBefore.height=0},a.fn.cycle.transitions.fadeZoom=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!1,!1),d.cssBefore.left=c.cycleW/2,d.cssBefore.top=c.cycleH/2,a.extend(d.animIn,{top:0,left:0,width:c.cycleW,height:c.cycleH})}),d.cssBefore.width=0,d.cssBefore.height=0,d.animOut.opacity=0},a.fn.cycle.transitions.blindX=function(b,c,d){var e=b.css("overflow","hidden").width();d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d),d.animIn.width=c.cycleW,d.animOut.left=b.cycleW}),d.cssBefore.left=e,d.cssBefore.top=0,d.animIn.left=0,d.animOut.left=e},a.fn.cycle.transitions.blindY=function(b,c,d){var e=b.css("overflow","hidden").height();d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d),d.animIn.height=c.cycleH,d.animOut.top=b.cycleH}),d.cssBefore.top=e,d.cssBefore.left=0,d.animIn.top=0,d.animOut.top=e},a.fn.cycle.transitions.blindZ=function(b,c,d){var e=b.css("overflow","hidden").height(),f=b.width();d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d),d.animIn.height=c.cycleH,d.animOut.top=b.cycleH}),d.cssBefore.top=e,d.cssBefore.left=f,d.animIn.top=0,d.animIn.left=0,d.animOut.top=e,d.animOut.left=f},a.fn.cycle.transitions.growX=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!1,!0),d.cssBefore.left=this.cycleW/2,d.animIn.left=0,d.animIn.width=this.cycleW,d.animOut.left=0}),d.cssBefore.top=0,d.cssBefore.width=0},a.fn.cycle.transitions.growY=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!0,!1),d.cssBefore.top=this.cycleH/2,d.animIn.top=0,d.animIn.height=this.cycleH,d.animOut.top=0}),d.cssBefore.height=0,d.cssBefore.left=0},a.fn.cycle.transitions.curtainX=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!1,!0,!0),d.cssBefore.left=c.cycleW/2,d.animIn.left=0,d.animIn.width=this.cycleW,d.animOut.left=b.cycleW/2,d.animOut.width=0}),d.cssBefore.top=0,d.cssBefore.width=0},a.fn.cycle.transitions.curtainY=function(b,c,d){d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!0,!1,!0),d.cssBefore.top=c.cycleH/2,d.animIn.top=0,d.animIn.height=c.cycleH,d.animOut.top=b.cycleH/2,d.animOut.height=0}),d.cssBefore.height=0,d.cssBefore.left=0},a.fn.cycle.transitions.cover=function(b,c,d){var e=d.direction||"left",f=b.css("overflow","hidden").width(),g=b.height();d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d),e=="right"?d.cssBefore.left=-f:e=="up"?d.cssBefore.top=g:e=="down"?d.cssBefore.top=-g:d.cssBefore.left=f}),d.animIn.left=0,d.animIn.top=0,d.cssBefore.top=0,d.cssBefore.left=0},a.fn.cycle.transitions.uncover=function(b,c,d){var e=d.direction||"left",f=b.css("overflow","hidden").width(),g=b.height();d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!0,!0,!0),e=="right"?d.animOut.left=f:e=="up"?d.animOut.top=-g:e=="down"?d.animOut.top=g:d.animOut.left=-f}),d.animIn.left=0,d.animIn.top=0,d.cssBefore.top=0,d.cssBefore.left=0},a.fn.cycle.transitions.toss=function(b,c,d){var e=b.css("overflow","visible").width(),f=b.height();d.before.push(function(b,c,d){a.fn.cycle.commonReset(b,c,d,!0,!0,!0),!d.animOut.left&&!d.animOut.top?a.extend(d.animOut,{left:e*2,top:-f/2,opacity:0}):d.animOut.opacity=0}),d.cssBefore.left=0,d.cssBefore.top=0,d.animIn.left=0},a.fn.cycle.transitions.wipe=function(b,c,d){var e=b.css("overflow","hidden").width(),f=b.height();d.cssBefore=d.cssBefore||{};var g;if(d.clip)if(/l2r/.test(d.clip))g="rect(0px 0px "+f+"px 0px)";else if(/r2l/.test(d.clip))g="rect(0px "+e+"px "+f+"px "+e+"px)";else if(/t2b/.test(d.clip))g="rect(0px "+e+"px 0px 0px)";else if(/b2t/.test(d.clip))g="rect("+f+"px "+e+"px "+f+"px 0px)";else if(/zoom/.test(d.clip)){var h=parseInt(f/2,10),i=parseInt(e/2,10);g="rect("+h+"px "+i+"px "+h+"px "+i+"px)"}d.cssBefore.clip=d.cssBefore.clip||g||"rect(0px 0px 0px 0px)";var j=d.cssBefore.clip.match(/(\d+)/g),k=parseInt(j[0],10),l=parseInt(j[1],10),m=parseInt(j[2],10),n=parseInt(j[3],10);d.before.push(function(b,c,d){if(b==c)return;var g=a(b),h=a(c);a.fn.cycle.commonReset(b,c,d,!0,!0,!1),d.cssAfter.display="block";var i=1,j=parseInt(d.speedIn/13,10)-1;(function o(){var a=k?k-parseInt(i*(k/j),10):0,b=n?n-parseInt(i*(n/j),10):0,c=m<f?m+parseInt(i*((f-m)/j||1),10):f,d=l<e?l+parseInt(i*((e-l)/j||1),10):e;h.css({clip:"rect("+a+"px "+d+"px "+c+"px "+b+"px)"}),i++<=j?setTimeout(o,13):g.css("display","none")})()}),a.extend(d.cssBefore,{display:"block",opacity:1,top:0,left:0}),d.animIn={left:0},d.animOut={left:0}}}(jQuery)
-</script>
-<div id="homepage__new-banner">
-<div id="jqs_nav"><a href="http://www.zooplus.es/#" class="">1</a><a href="http://www.zooplus.es/#" class="">2</a><a href="http://www.zooplus.es/#" class="activeSlide">3</a></div><div class="jqs_slider" style="position: relative;">
-<a href="http://pictures.zooplus.com/zoodog?oaparams=2__bannerid=18460__zoneid=73__cb=76d4e132df__oadest=http://www.zooplus.es/shop/tienda_perros/correas_collares_perros/reflectores_seguridad?utm_source=zooadserver&utm_medium=Homepage&utm_term=M2&utm_campaign=10%25_darkness" target="_self" style="position: absolute; top: 0px; left: 0px; z-index: 3; opacity: 0; display: none; width: 764px; height: 244px;">
-<img src="./image/2015_10_Darkness_2000x640_ES_1.jpg" alt="Cambio de hora"></a>
-<a href="http://pictures.zooplus.com/zoodog?oaparams=2__bannerid=18460__zoneid=73__cb=76d4e132df__oadest=http://www.zooplus.es/shop/tienda_gatos/especial_otono_invierno?utm_source=zooadserver&utm_medium=Homepage&utm_term=M2&utm_campaign=winter_accessories" target="_self" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0; width: 764px; height: 244px;">
-<img src="./image/2015_10_CatCuddleTime_2000x640_ES_1.jpg" alt="Winter accessories"></a>
-<a href="http://pictures.zooplus.com/zoodog?oaparams=2__bannerid=18460__zoneid=73__cb=76d4e132df__oadest=http://www.zooplus.es/shop/promociones_especiales/acciones/kilos_gratos?utm_source=zooadserver&utm_medium=Homepage&utm_term=M2%20FELT%20&utm_campaign=lluvia%20de%20kilos" target="_self" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1; width: 764px; height: 244px;">
-<img src="./image/2015_10_AprilShowers_2000x640_ES_1.jpg" alt="Lluvia de kilos gratis"></a>
-</div>
-</div>
-<script type="text/javascript">
-$(document).ready(function() {
-$('#thirdLevelContent .bannercode').height("350px");//fix for ad server
-$(".zone-wrapper").width("100%");
-$('.jqs_slider').before('<div id="jqs_nav"></div>').cycle({
-fx: 'fade',
-pager: '#jqs_nav',
-pause: 1,
-timeout: 4000,
-speed:2000
-});
-});
-</script><div id="beacon_76d4e132df" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./image/zoohamster(5)" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
-
-        </div>
-        <noscript>
-            &lt;div class="zone"&gt;
-                &lt;a target='_blank' href='http://pictures.zooplus.com/zoodog?n=7b143ce3'&gt;
-                    &lt;img alt='' src='http://pictures.zooplus.com/zoopuppy?zoneid=73&amp;amp;n=7b143ce3&amp;amp;siteid=15'/&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        </noscript>
-
-
-    </div>
-
-        
-                
-                    <p class="orangetextbold" style="margin-bottom: 10px; display: block;" id="reco-title-home1_rr">
-                        Te presentamos algunas de nuestras superofertas para tu mascota:
-                    </p>
-                    <div class="reco-box horizontal" data-reco-scheme="home1_rr" data-reco-template="productreco-template-products-horizontal" name="home1_rr">
-                        <!-- Product recommendations will be inserted here -->
-                    <ul>                  <li class="product-box">             <header>                 <a href="http://www.zooplus.es/shop/tienda_perros/transportines_viajes/jaulas_transporte/jaulas_rectas_transporte/57075?rrec=true" name="home1_rr-product-326094" title="Jaula para transporte Double Door">      <img src="./image/i_top_seller_1000x1000_es_7.jpg" alt="Jaula para transporte Double Door">     </a>             </header>             <div class="body">                 <a href="http://www.zooplus.es/feedback/shop/tienda_perros/transportines_viajes/jaulas_transporte/jaulas_rectas_transporte/57075?rrec=true"><img src="./image/4_star.gif"></a>                 <h5><a href="http://www.zooplus.es/shop/tienda_perros/transportines_viajes/jaulas_transporte/jaulas_rectas_transporte/57075?rrec=true" name="home1_rr-product-326094-name" title="Jaula para transporte Double Door">Jaula para transporte Double Door</a></h5>             </div>              <a href="http://www.zooplus.es/shop/tienda_perros/transportines_viajes/jaulas_transporte/jaulas_rectas_transporte/57075?rrec=true" name="home1_rr-product-326094-price" title="Jaula para transporte Double Door">                 <footer>                     <span itemprop="price" class="smalltextPrices">PRVP* 49,90 €</span>                     <br>                      <span class="specialPrices">                         <span itemprop="price">en zooplus 32,99 €</span>                         <br>                         <span class="smalltext smalltextPrices"></span>                     </span>                 </footer>             </a>         </li>                  <li class="product-box">             <header>                 <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/royal_canin_size/403094?rrec=true" name="home1_rr-product-1363237" title="Royal Canin Mini Adult 9 kg en oferta: 8 + 1 kg ¡gratis!">      <img src="./image/ddddddd_0.jpg" alt="Royal Canin Mini Adult 9 kg en oferta: 8 + 1 kg ¡gratis!">     </a>             </header>             <div class="body">                 <a href="http://www.zooplus.es/feedback/shop/tienda_perros/pienso_perros/royal_canin_size/403094?rrec=true"><img src="./image/5_star.gif"></a>                 <h5><a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/royal_canin_size/403094?rrec=true" name="home1_rr-product-1363237-name" title="Royal Canin Mini Adult 9 kg en oferta: 8 + 1 kg ¡gratis!">Royal Canin Mini Adult 9 kg en oferta: ...</a></h5>             </div>              <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/royal_canin_size/403094?rrec=true" name="home1_rr-product-1363237-price" title="Royal Canin Mini Adult 9 kg en oferta: 8 + 1 kg ¡gratis!">                 <footer>                     <span itemprop="price" class="smalltextPrices">PRVP* 47,95 €</span>                     <br>                      <span class="specialPrices">                         <span itemprop="price">en zooplus 31,99 €</span>                         <br>                         <span class="smalltext smalltextPrices">( 3,55 € / kg )</span>                     </span>                 </footer>             </a>         </li>                  <li class="product-box">             <header>                 <a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/royal_canin/399180?rrec=true" name="home1_rr-product-1346519" title="Royal Canin Feline 12 kg en oferta: 10 + 2 kg ¡gratis!">      <img src="./image/fit_32_1.jpg" alt="Royal Canin Feline 12 kg en oferta: 10 + 2 kg ¡gratis!">     </a>             </header>             <div class="body">                 <a href="http://www.zooplus.es/feedback/shop/tienda_gatos/pienso_gatos/royal_canin/399180?rrec=true"><img src="./image/5_star.gif"></a>                 <h5><a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/royal_canin/399180?rrec=true" name="home1_rr-product-1346519-name" title="Royal Canin Feline 12 kg en oferta: 10 + 2 kg ¡gratis!">Royal Canin Feline 12 kg en oferta: 10 ...</a></h5>             </div>              <a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/royal_canin/399180?rrec=true" name="home1_rr-product-1346519-price" title="Royal Canin Feline 12 kg en oferta: 10 + 2 kg ¡gratis!">                 <footer>                     <span itemprop="price" class="smalltextPrices">PRVP* 73,35 €</span>                     <br>                      <span class="specialPrices">                         <span itemprop="price">en zooplus 47,99 €</span>                         <br>                         <span class="smalltext smalltextPrices">( 4,00 € / kg )</span>                     </span>                 </footer>             </a>         </li>                  <li class="product-box">             <header>                 <a href="http://www.zooplus.es/shop/tienda_gatos/bandejas_higienicas_gatos/feliway_felifriend/174361?rrec=true" name="home1_rr-product-1758579" title="FELIWAY difusor blanco redondo ¡con gran descuento!">      <img src="./image/174361_4.jpg" alt="FELIWAY difusor blanco redondo ¡con gran descuento!">     </a>             </header>             <div class="body">                 <a href="http://www.zooplus.es/feedback/shop/tienda_gatos/bandejas_higienicas_gatos/feliway_felifriend/174361?rrec=true"><img src="./image/4_star.gif"></a>                 <h5><a href="http://www.zooplus.es/shop/tienda_gatos/bandejas_higienicas_gatos/feliway_felifriend/174361?rrec=true" name="home1_rr-product-1758579-name" title="FELIWAY difusor blanco redondo ¡con gran descuento!">FELIWAY difusor blanco redondo ¡con gra...</a></h5>             </div>              <a href="http://www.zooplus.es/shop/tienda_gatos/bandejas_higienicas_gatos/feliway_felifriend/174361?rrec=true" name="home1_rr-product-1758579-price" title="FELIWAY difusor blanco redondo ¡con gran descuento!">                 <footer>                     <span itemprop="price" class="smalltextPrices">Precio normal 27,99 €</span>                     <br>                      <span class="specialPrices">                         <span itemprop="price">rebajado a 19,99 €</span>                         <br>                         <span class="smalltext smalltextPrices"></span>                     </span>                 </footer>             </a>         </li>              </ul></div>
-                
-
-        
-    <div class="zone-wrapper" style="text-align: center; width: 100%;">
-        
-
-
-
-
-
-<!-- Zone-Region: CENTER_MIDDLE_2 -->
-<!-- xxzone.ftl -->
-        <div class="zone">
-            <script type="text/javascript">
-                <!--// <![CDATA[
-                /* [id74] */
-                if (typeof OA_show == 'function') {
-                    OA_show(74);
-                }
-                // ]]> -->
-            </script>
-        </div>
-        <noscript>
-            &lt;div class="zone"&gt;
-                &lt;a target='_blank' href='http://pictures.zooplus.com/zoodog?n=sghz2342'&gt;
-                    &lt;img alt='' src='http://pictures.zooplus.com/zoopuppy?zoneid=74&amp;amp;n=sghz2342&amp;amp;siteid=15'/&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        </noscript>
-
-
-    </div>
-    <br style="clear:both">
-
-    
-
-    <!--  SMALL BOXES -->
-    <table border="0">
-        <tbody><tr>
-            <td valign="top">
-
-                <!--  SMALL BOX1: Top Seller Hund -->
-                
-
-
-
-<div class="small-box">
-
-
-    <div class="small-box-middle">
-
-        <h2>Perros: lo más vendido</h2>
-
-        <div class="small-box-bg" style="margin-top:0px">
-            <!--  Produkte -->
-
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; margin-top:10px">
-                        <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/royal_canin_size/royal_canin_grande/56412" title="Royal Canin Maxi Junior">
-                            <img src="./image/4902_rcmaxijunior_8.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;margin-top:10px">
-                    <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/royal_canin_size/royal_canin_grande/56412" title="" class="boldtext follow3">
-                            Royal Canin Maxi Junior
-                        <br>
-                       <span class="linkText">
-                        Para perros de raza grande (de 26 a 44 kg de peso adulto) de hasta 15 meses de edad. ..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; ">
-                        <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/nutro_natural_choice/nutro_adulto/56374" title="Nutro Natural Choice Adult Sensitive Pollo y arroz">
-                            <img src="./image/5175_nutro_sensitive_hr_6.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;">
-                    <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/nutro_natural_choice/nutro_adulto/56374" title="" class="boldtext follow3">
-                            Nutro Natural Choice Adult Sensitive Pollo y arroz
-                        <br>
-                       <span class="linkText">
-                        Para perros de actividad normal y digestión sensible. Mejora las funciones gastrointe..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; ">
-                        <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/forza10/packs_ahorro_forza10/261898" title="Pack Ahorro:  Forza10 2 x 15 kg">
-                            <img src="./image/1422864369247_1_3.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;">
-                    <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/forza10/packs_ahorro_forza10/261898" title="" class="boldtext follow3">
-                            Pack Ahorro:  Forza10 2 x 15 kg
-                        <br>
-                       <span class="linkText">
-                        Oferta sensacional: con el Doble pack de Forza10 2 x 15 kg ¡ahorra comprando más unid..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; ">
-                        <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/royal_canin_perros_raza/bulldog_frances/212610" title="Royal Canin Bulldog Francés Junior">
-                            <img src="./image/197482_4.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;">
-                    <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/royal_canin_perros_raza/bulldog_frances/212610" title="" class="boldtext follow3">
-                            Royal Canin Bulldog Francés Junior
-                        <br>
-                       <span class="linkText">
-                        Pienso para cachorros de Bulldog Francés Junior hasta los 12 meses. Su contenido en p..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; ">
-                        <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/eukanuba/packs_ahorro_eukanuba/146923" title="Pack Ahorro: Eukanuba 2 x 7,5/15/12 kg">
-                            <img src="./image/largebreed_sparpaket_1.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;">
-                    <a href="http://www.zooplus.es/shop/tienda_perros/pienso_perros/eukanuba/packs_ahorro_eukanuba/146923" title="" class="boldtext follow3">
-                            Pack Ahorro: Eukanuba 2 x 7,5/15/12 kg
-                        <br>
-                       <span class="linkText">
-                        Oferta sensacional: con el Doble pack Eukanuba 2 x 7,5/12/15 kg ¡ahorra comprando más..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-
-            <br class="clear"><br>
-
-            <!--  Bottom Link -->
-            <div class="small-box-bottomlinks boldtext">
-                <a href="http://www.zooplus.es/specials/tienda_perros/topten" class="follow2">
-                    Lo más vendido
-                </a>
-            </div>
-
-
+<div class="zone-wrapper" style="width: 100%;">
+    <div class="zone">
+        <div id="beacon_76d4e132df" style="position: absolute; left: 0px; top: 0px; visibility: hidden;">
+            <img src="./image/zoohamster(5)" width="0" height="0" alt="" style="width: 0px; height: 0px;">
         </div>
     </div>
-</div>
-                
-            </td>
-            <td style="width:14px;"></td>
-            <td valign="top">
-
-                <!--  SMALL BOX2: Liebling des Tages  only if there are pets-->
-                
-
-<div class="small-box" style="margin-left:5px">
-    <div class="small-box-middle">
+</div> 
 
 
-        <h2>Mascota del día</h2>
-        
-        
-            
 
-        <!--  Linke Seite -->
-            <div class="small-box3-left">
-                <a href="http://www.zooplus.es/petofday" title="Golden">
-                    <img src="./image/171001708451689693.jpg" alt="Mascota del día" border="0">
-
-                </a>
-            <br>
-
-            <a href="http://www.zooplus.es/petofday" title="Golden">Golden</a>
-            <p>
-                
-                
-                    Golden esperando que le caiga alguna cosa de la mesa.
-                
-                   <br> Golden
-            </p>
-        </div>
-        
-        <!--  Rechte Seite -->
-        <div class="small-box3-right">
-            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                <tbody>
-                
-
-                    
-                        <tr style="font-size:9px">
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=134355" title="BRIDA">
-                            <img src="./image/7372982601127729099.jpg" alt="BRIDA">
-                            <br>BRIDA
-                       </a>
-                    </td>
-
-                    
-
-                
-
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=135145" title="Lora">
-                            <img src="./image/1871960462167951862.jpg" alt="Lora">
-                            <br>Lora
-                       </a>
-                    </td>
-
-                    
-                        </tr>
-                    
-
-                
-
-                    
-                        <tr style="font-size:9px">
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=133741" title="Koby">
-                            <img src="./image/767044442844759763.jpg" alt="Koby">
-                            <br>Koby
-                       </a>
-                    </td>
-
-                    
-
-                
-
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=129411" title="neko">
-                            <img src="./image/6455191347608440952.jpg" alt="neko">
-                            <br>neko
-                       </a>
-                    </td>
-
-                    
-                        </tr>
-                    
-
-                
-
-                    
-                        <tr style="font-size:9px">
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=133818" title="KIARA">
-                            <img src="./image/6955322773268803994.jpg" alt="KIARA">
-                            <br>KIARA
-                       </a>
-                    </td>
-
-                    
-
-                
-
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=133600" title="Noha">
-                            <img src="./image/6895859241838786818.jpg" alt="Noha">
-                            <br>Noha
-                       </a>
-                    </td>
-
-                    
-                        </tr>
-                </tbody>
-            </table>
-        </div>
-        <div style="clear:both;"></div>
-
-        <!--  Bottom Link -->
-        <div class="small-box-bottomlinks boldtext">
-              
-            <a class="follow2" href="https://www.zooplus.es/account/petofday">
-                Participar&nbsp;
-            </a>
-        </div>
-
+<!-- ZONA GRIS -->              
+<div class="full-grey-white-middle" style="border-radius: 6px;">
+    <div class="text" style="padding: 5px 10px;">
+        <h2>Zooplus accesorios y comida para mascotas</h2>     
     </div>
 </div>
-
-                
-                
-
-            </td>
-            
-        <tr>
-            <td valign="top">
-
-                <!--  SMALL BOX3: Top Seller Katze -->
-                <!-- if Liebling des Tages is shown...-->
-                
-
-<div class="small-box">
-
-
-    <div class="small-box-middle">
-
-        <h2>Gatos: lo más vendido</h2>
-
-        <div class="small-box-bg" style="margin-top:0px">
-            <!--  Produkte -->
-
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; margin-top:10px">
-                        <a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/affinity_advance/sterilized/278425" title="Advance Sterilized Adult con pavo">
-                            <img src="./image/277985_1.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;margin-top:10px">
-                    <a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/affinity_advance/sterilized/278425" title="" class="boldtext follow3">
-                            Advance Sterilized Adult con pavo
-                        <br>
-                       <span class="linkText">
-                        Pienso de alta gama especialmente indicado para gatos esterilizados. Ayuda a prevenir..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; ">
-                        <a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/royal_canin/royal_canin_sterilised/314341" title="Royal Canin Sterilised Appetite Control">
-                            <img src="./image/64583_PLA_Royal_Canin_Sterilised_Appetite_Control_10_kg_6.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;">
-                    <a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/royal_canin/royal_canin_sterilised/314341" title="" class="boldtext follow3">
-                            Royal Canin Sterilised Appetite Control
-                        <br>
-                       <span class="linkText">
-                        Pienso para gatos castrados de 1 a 7 años que tienden a aumentar la ingesta de alimen..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; ">
-                        <a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/royal_canin_veterinary_diet/problemas_digestivos/307334" title="Royal Canin Gastro Intestinal GI 32 Veterinary Diet">
-                            <img src="./image/301494_1.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;">
-                    <a href="http://www.zooplus.es/shop/tienda_gatos/pienso_gatos/royal_canin_veterinary_diet/problemas_digestivos/307334" title="" class="boldtext follow3">
-                            Royal Canin Gastro Intestinal GI 32 Veterinary Diet
-                        <br>
-                       <span class="linkText">
-                        Pienso completo con un nivel alto en energía, alto en grasas y con una alta palatabil..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; ">
-                        <a href="http://www.zooplus.es/shop/tienda_gatos/arena_gatos/classy_cat/55810" title="Classy Cat arena aglomerante">
-                            <img src="./image/10745_classycat_1.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;">
-                    <a href="http://www.zooplus.es/shop/tienda_gatos/arena_gatos/classy_cat/55810" title="" class="boldtext follow3">
-                            Classy Cat arena aglomerante
-                        <br>
-                       <span class="linkText">
-                        Classy Cat es una arena aglomerante de minerales naturales para gatos. Proviene de Ca..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-                
-
-                    <div style="width: 65px; float: left; margin-bottom: 9px; ">
-                        <a href="http://www.zooplus.es/shop/tienda_gatos/camas_cojines_gatos/hamacas_radiador_gato/56220" title="Hamaca para la calefacción Trixie de Luxe">
-                            <img src="./image/10538_trixie_liegemulde_1.jpg" class="prodimgs" alt="">
-                        </a>
-                    </div>
-                <div style="float:left; width: 280px; margin-bottom: 9px;">
-                    <a href="http://www.zooplus.es/shop/tienda_gatos/camas_cojines_gatos/hamacas_radiador_gato/56220" title="" class="boldtext follow3">
-                            Hamaca para la calefacción Trixie de Luxe
-                        <br>
-                       <span class="linkText">
-                        Para relajarse en la calefacción, esta hamaca dispone de un área amplia para tumbarse..
-                       </span>
-                    </a>
-                </div>
-                <br class="clear">
-            
-
-            <br class="clear"><br>
-
-            <!--  Bottom Link -->
-            <div class="small-box-bottomlinks boldtext">
-                <a href="http://www.zooplus.es/specials/tienda_gatos/topten" class="follow2">
-                    Lo más vendido
-                </a>
-            </div>
-
-
-        </div>
-    </div>
-</div>
-                
-            </td>
-            <td style="width:14px;"></td>
-            <td valign="top">
-
-                <!--  SMALL BOX2: Liebling des Tages  only if there are pets-->
-                
-
-<div class="small-box" style="margin-left:5px">
-    <div class="small-box-middle">
-
-
-        <h2>Mascota del día</h2>
-        
-        
-            
-
-        <!--  Linke Seite -->
-            <div class="small-box3-left">
-                <a href="http://www.zooplus.es/petofday" title="Golden">
-                    <img src="./image/171001708451689693.jpg" alt="Mascota del día" border="0">
-
-                </a>
-            <br>
-
-            <a href="http://www.zooplus.es/petofday" title="Golden">Golden</a>
-            <p>
-                
-                
-                    Golden esperando que le caiga alguna cosa de la mesa.
-                
-                   <br> Golden
-            </p>
-        </div>
-        
-        <!--  Rechte Seite -->
-        <div class="small-box3-right">
-            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                <tbody>
-                
-
-                    
-                        <tr style="font-size:9px">
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=134355" title="BRIDA">
-                            <img src="./image/7372982601127729099.jpg" alt="BRIDA">
-                            <br>BRIDA
-                       </a>
-                    </td>
-
-                    
-
-                
-
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=135145" title="Lora">
-                            <img src="./image/1871960462167951862.jpg" alt="Lora">
-                            <br>Lora
-                       </a>
-                    </td>
-
-                    
-                        </tr>
-                    
-
-                
-
-                    
-                        <tr style="font-size:9px">
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=133741" title="Koby">
-                            <img src="./image/767044442844759763.jpg" alt="Koby">
-                            <br>Koby
-                       </a>
-                    </td>
-
-                    
-
-                
-
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=129411" title="neko">
-                            <img src="./image/6455191347608440952.jpg" alt="neko">
-                            <br>neko
-                       </a>
-                    </td>
-
-                    
-                        </tr>
-                    
-
-                
-
-                    
-                        <tr style="font-size:9px">
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=133818" title="KIARA">
-                            <img src="./image/6955322773268803994.jpg" alt="KIARA">
-                            <br>KIARA
-                       </a>
-                    </td>
-
-                    
-
-                
-
-                    
-
-                    <td class="podsmall" align="center" valign="top">
-                       
-                       <a href="http://www.zooplus.es/petofday?petId=133600" title="Noha">
-                            <img src="./image/6895859241838786818.jpg" alt="Noha">
-                            <br>Noha
-                       </a>
-                    </td>
-
-                    
-                        </tr>
-                </tbody>
-            </table>
-        </div>
-        <div style="clear:both;"></div>
-
-        <!--  Bottom Link -->
-        <div class="small-box-bottomlinks boldtext">
-              
-            <a class="follow2" href="https://www.zooplus.es/account/petofday">
-                Participar&nbsp;
-            </a>
-        </div>
-
-    </div>
-</div>
-
-                
-                
-
-            </td>
-        </tr>
-        </tr>
-        </tbody>
-    </table>
-
-    <br>
-
-        <br>
-        <div class="full-grey-white-middle" style="border-radius: 6px;">
-                <div class="text" style="padding: 5px 10px;">
-                    <h2>Zooplus accesorios y comida para mascotas</h2> 
-<h3>¡La tienda online <b>líder en Europa y España</b> donde encontrarás todo lo necesario para tu perro, gato, roedor, hurón, peces y pájaros!</h3>
-
-<p><b>En zooplus podrás comprar marcas como:</b>
-<b><a href="http://www.zooplus.es/shop/top_marcas/royal_canin">Royal Canin</a></b>, <b><a href="http://www.zooplus.es/shop/top_marcas/hills_science_plan">Hill's Science Plan</a></b>, <b><a href="http://www.zooplus.es/shop/top_marcas/advance">Advance</a></b>, <b><a href="http://www.zooplus.es/shop/top_marcas/affinity_ultima">Ultima</a></b>, <b><a href="http://www.zooplus.es/shop/top_marcas/eukanuba">Eukanuba</a></b> o <b><a href="http://www.zooplus.es/shop/top_marcas/pro_plan">Pro Plan</a></b>.
-
-</p><p><b>Encuentra todos los accesorios que necesita tu mascota:</b>
-<br>
-<br>
-<b>¿Tienes un perro?</b> ¡Entonces una <b><a href="http://www.zooplus.es/shop/tienda_perros/camas_cojines_cestas_mantas_perros">cama</a></b> o un
-divertido <b><a href="http://www.zooplus.es/shop/tienda_perros/juguetes_deporte_perros">juguete</a></b> son imprescindibles!
-En zooplus también encontrarás todos los accesorios necesarios para mantener tu casa <b><a href="http://www.zooplus.es/shop/tienda_perros/higiene_canina_maquinas_cortapelo">limpia y libre de pelos</a></b>, como por ejemplo los <b><a href="http://www.zooplus.es/shop/tienda_perros/higiene_canina_maquinas_cortapelo/empapadores_y_panales">empapadores</a></b> o el famoso <b><a href="http://www.zooplus.es/shop/top_accesorios/furminator">FURminator</a></b>.
-Tu perro también podrá relajarse y resguardarse del frío y la lluvia gracias a nuestras <b><a href="http://www.zooplus.es/shop/tienda_perros/casetas_perros">casetas para perros</a></b>, además podrá viajar de una forma cómoda y segura gracias a nuestros <b><a href="http://www.zooplus.es/shop/tienda_perros/transportines_accesorios_coche">transportines</a></b>. Si lo que tienes es un cachorro y no sabes lo que él necesita, te recomendamos que visites nuestra sección especial para <b><a href="http://www.zooplus.es/shop/tienda_perros/cachorros">cachorros</a></b>.
-<br>
-<br>
-<b>¿Buscas algo para tu gato?</b> En zooplus podrás encontrar todo tipo de accesorios para gatos desde <b><a href="http://www.zooplus.es/shop/tienda_gatos/rascadores_muebles">rascadores</a></b> de todos los tamaños hasta <b><a href="http://www.zooplus.es/shop/tienda_gatos/bandejas_higienicas_gatos">bandejas higiénicas</a></b> de alta calidad o la imprescindible <b><a href="http://www.zooplus.es/shop/tienda_gatos/arena_absorbente_gatos">arena para gatos</a></b>.
-<br>
-<br>
-</p><p><b>¿Tienes alguna duda más sobre el cuidado de tu mascota?</b>
-<br>
-En nuestro <b><a href="http://blog.zooplus.es/">blog</a></b> podrás encontrar información muy útil acerca de la salud de tu mascota y productos especiales para ellos.
-<br>
-<br>
-Si quieres mantenerte informado de todas las ofertas y promociones especiales te recomendamos que te suscribas a nuestra <b><a href="https://www.zooplus.es/newsletter/">newsletter</a></b>. 
-<br>
-<br>
-<b><a href="http://www.zooplus.es/content/about">¿Quieres conocer más sobre nosotros?</a></b>
-</p>
-                </div>
-        </div>
-
 
 
 <!-- Zone-Region: CENTER_BOTTOM -->
