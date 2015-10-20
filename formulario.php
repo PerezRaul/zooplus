@@ -1087,40 +1087,89 @@ Ofertas del día                            </h3>
 <div class="widget">
 	<div class="navigation-orange-middle">
 		<div class="navigation-orange-top">&nbsp;</div>
-			<div style="padding:0 12px 7px 12px;"><br>
-                <form >
-                    Tipo de anuncio: <br /><select name="anuncio">
-                        <option value="todo" selected>Todo</option>
-                        <option value="perdido">Perdido</option>
-                        <option value="encontrado">Encontrado</option>
-                    </select><br />
-                    Municipio: <br /><select name="municipio">
-                        <option value="todo" selected>Todo</option>
-                        <?php
+        <span style="font-size:18px;color:green"><b>¡Encuentra tu mascota!</b></span>
+            <div class="full-grey-white-middle" style="border-radius: 6px; width:195px">
+    			<div style="padding:0 12px 7px 12px;"><br>
+                    <form name="busqueda">
+                        <b>Tipo de anuncio:</b> <br />
+                        <select name="anuncio">
+                            <option value="todo" selected>Todo</option>
+                            <option value="perdido">Perdido</option>
+                            <option value="encontrado">Encontrado</option>
+                        </select><br />
+                        <b>Municipio:</b> <br />
+                        <select name="municipio">
+                            <option value="todo" selected>Todo</option>
+                            <?php
 
-                            while ($opMunicipio = mysqli_fetch_array($municipio)){
-                                echo '<option value="'.$opMunicipio['municipi_id'].'">'.$opMunicipio['municipi_nom'].'</option>';
-                            }
-                        ?>
-                    </select><br />
-                    Tipo de mascota: <br /><select name="tipo_animal">
-                        <option value="todo" selected>Todo</option>
-                        <?php
-                            while ($opTipoAnimal = mysqli_fetch_array($tipo_animal)){
-                                echo '<option value="'.$opTipoAnimal['tipus_anim_id'].'">'.$opTipoAnimal['tipus_anim_nom'].'</option>';
-                            }
-                        ?>
-                    </select><br />
-                    Raza: <br /><select name="raza">
-                        <option value="todo" selected>Todo</option>
-                         <?php
-                            while ($opRaza = mysqli_fetch_array($raza)){
-                                echo '<option value="'.$opRaza['raca_id'].'">'.$opRaza['raca_nom'].'</option>';
-                            }
-                        ?>
-                    </select><br /><br />
-                    <input type="submit" value="Buscar" /><br /><br />
-                </form>
+                                while ($opMunicipio = mysqli_fetch_array($municipio)){
+                                    echo '<option value="'.$opMunicipio['municipi_id'].'">'.$opMunicipio['municipi_nom'].'</option>';
+                                }
+                            ?>
+                        </select><br />
+                        <b>Tipo de mascota:</b> <br />
+                        <select name="tipo_animal">
+                            <option value="todo" selected>Todo</option>
+                            <?php
+                                while ($opTipoAnimal = mysqli_fetch_array($tipo_animal)){
+                                    echo '<option value="'.$opTipoAnimal['tipus_anim_id'].'">'.$opTipoAnimal['tipus_anim_nom'].'</option>';
+                                }
+                            ?>
+                        </select><br />
+                        <b>Raza:</b> <br />
+                        <select name="raza">
+                            <option value="todo" selected>Todo</option>
+                             <?php
+                                while ($opRaza = mysqli_fetch_array($raza)){
+                                    echo '<option value="'.$opRaza['raca_id'].'">'.$opRaza['raca_nom'].'</option>';
+                                }
+                            ?>
+                        </select><br /><br />
+                        <input type="submit" value="Buscar" style="margin-left:110px;background-color:green" /><br />
+                    </form>
+                </div>
+            </div>                         
+        <div class="navigation-orange-bottom">&nbsp;</div>  
+    </div>
+</div>
+
+<div class="widget">
+    <div class="navigation-orange-middle">
+        <div class="navigation-orange-top">&nbsp;</div>
+        <span style="font-size:18px;color:green"><b>¡Pon tu anuncio!</b></span>
+            <div class="full-grey-white-middle" style="border-radius: 6px; width:195px">
+                <div style="padding:0 12px 7px 12px;"><br>
+                    <form name="insertar" action="insertarDatos.php" method="post">
+                        <b>Nombre: </b><br />
+                        <input type="text" name="nombre" maxlength="50" required /><br />
+                        <b>Teléfono de contacto:</b> <br />
+                        <input type="text" name="telefono" pattern="^[9|6]\d{8}$" required />
+                        <b>Dirección de contacto:</b> <br />
+                        <input type="text" name="direccion" /><br />
+                        <b>Tipo de anuncio:</b> <br />
+                        <select name="anuncio2">
+                            <option value="Perdido">Perdido</option>
+                            <option value="Encontrado">Encontrado</option>
+                        </select><br />
+                        <b>Municipio:</b> <br />
+                        <input type="text" name="municipio2" required /><br />
+                        <b>Tipo de mascota:</b> <br />
+                        <select name="tipo_animal2">
+                            <option value="Perro">Perro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Pájaro">Pájaro</option>
+                            <option value="Otros">Otros</option>
+                        </select><br />
+                        <b>Raza:</b> <br />
+                        <input type="text" name="raza2"><br />
+                        <b>Título del anuncio:</b><br />
+                        <input type="text" name="titulo" required /><br />
+                        <b>Descripción del anuncio:</b><br />
+                        <textarea type="text" name="contenido" required></textarea><br /><br />
+                        <input type="image" name="foto" value="Inserta tu foto" /><br /><br />
+                        <input type="submit" name="enviar" value="Enviar" style="margin-left:110px;background-color:green" /><br />
+                    </form>
+                </div>
             </div>                         
         <div class="navigation-orange-bottom">&nbsp;</div>  
     </div>

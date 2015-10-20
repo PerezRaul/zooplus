@@ -1025,4 +1025,11 @@ table.fs__table td {
     border: none;
     border-radius: 6px; }
 
+/* FORMATO DE LOS SELECT */
+select {
+  color:green;
+}
 
+form {
+  color:green;
+}
