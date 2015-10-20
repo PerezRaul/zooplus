@@ -1286,11 +1286,11 @@ Ofertas del día                            </h3>
         <h2>Resultados</h2>   
         <?php
         while ($datos = mysqli_fetch_array($anuncio)) {
-            echo "$datos['anu_id']";
-            echo "$datos['anu_tipus']";
-            echo "$datos['anu_data']";
-            echo "$datos['anu_foto']";
-            echo "$datos['anu_nom']";
+            echo "$datos[anu_id]<br/>";
+            echo "$datos[anu_tipus]<br/>";
+            echo "$datos[anu_data]<br/>";
+            echo "$datos[anu_foto]<br/>";
+            echo "$datos[anu_nom]<br/><br/>";
         }
         ?>  
     </div>
