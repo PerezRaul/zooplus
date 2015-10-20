@@ -1062,11 +1062,16 @@ Ofertas del día                            </h3>
 <!-- formulario daw-->
 <?php
 
+    /* bd_botiga_animals
+    ---------------------
+    tbl_anunci:         anu_contingut, anu_data, anu_foto, anu_id, anu_nom, anu_tipus, contact_id, mun_id, raca_id
+    tbl_contacte:       contact_adre, contact_id, contact_nom, contact_telf
+    tbl_municipi:       municipi_id, municipi_nom
+    tbl_raca:           raca_id, raca_nom, tipus_anim_id
+    tbl_tipus_animal    tipus_anim_id, tipus_anim_nom
+    */
+
     $conexion = mysqli_connect('localhost','root','','bd_botiga_animals') or die ('Conexión errónea');
-
-    /*$sql = "SELECT * FROM ";
-
-    $consulta = mysqli_query($conexion,$sql);*/
 
     $municipio = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
 
@@ -1088,6 +1093,7 @@ Ofertas del día                            </h3>
                     Municipio: <br /><select name="municipio">
                         <option value="todo" selected>Todo</option>
                         <?php
+
                             while ($opMunicipio = mysqli_fetch_array($municipio)){
                                 echo '<option value="'.$opMunicipio['municipi_id'].'">'.$opMunicipio['municipi_nom'].'</option>';
                             }
@@ -1103,16 +1109,9 @@ Ofertas del día                            </h3>
                     </select><br />
                     Raza: <br /><select name="raza">
                         <option value="todo" selected>Todo</option>
-                        <?php
-                        switch ($opTipoAnimal['tipus_anim_id']){
-                            case 1:  
-                                $raza = mysqli_query($conexion, "SELECT * FROM tbl_raca WHERE $opTipoAnimal['tipus_anim_id']=1");
-                                while ($opRaza = mysqli_fetch_array($raza)){
-                                    echo '<option value="'.$opRaza['raca_id'].'">'.$opRaza['raca_nom'].'</option>';
-                                }
-                        }
-                            while ($opRaza = mysqli_fetch_array($municipio)){
-                                echo '<option value="'.$opMunicipio['municipi_id'].'">'.$opMunicipio['municipi_nom'].'</option>';
+                         <?php
+                            while ($opRaza = mysqli_fetch_array($raza)){
+                                echo '<option value="'.$opRaza['raca_id'].'">'.$opRaza['raca_nom'].'</option>';
                             }
                         ?>
                     </select><br /><br />
