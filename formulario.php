@@ -1,3 +1,26 @@
+<?php
+
+    /* bd_botiga_animals
+    ---------------------
+    tbl_anunci:         anu_contingut, anu_data, anu_foto, anu_id, anu_nom, anu_tipus, contact_id, mun_id, raca_id
+    tbl_contacte:       contact_adre, contact_id, contact_nom, contact_telf
+    tbl_municipi:       municipi_id, municipi_nom
+    tbl_raca:           raca_id, raca_nom, tipus_anim_id
+    tbl_tipus_animal    tipus_anim_id, tipus_anim_nom
+    */
+
+    $conexion = mysqli_connect('localhost','root','','bd_botiga_animals') or die ('Conexión errónea');
+
+    $anuncio = mysqli_query($conexion,'SELECT * FROM tbl_anunci');
+
+    $municipio = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
+
+    $tipo_animal = mysqli_query($conexion, "SELECT * FROM tbl_tipus_animal");
+
+    $raza = mysqli_query($conexion, "SELECT * FROM tbl_raca");
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0022)http://www.zooplus.es/ -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" class=" dk_fouc"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -1060,26 +1083,7 @@ Ofertas del día                            </h3>
 
 
 <!-- formulario daw-->
-<?php
 
-    /* bd_botiga_animals
-    ---------------------
-    tbl_anunci:         anu_contingut, anu_data, anu_foto, anu_id, anu_nom, anu_tipus, contact_id, mun_id, raca_id
-    tbl_contacte:       contact_adre, contact_id, contact_nom, contact_telf
-    tbl_municipi:       municipi_id, municipi_nom
-    tbl_raca:           raca_id, raca_nom, tipus_anim_id
-    tbl_tipus_animal    tipus_anim_id, tipus_anim_nom
-    */
-
-    $conexion = mysqli_connect('localhost','root','','bd_botiga_animals') or die ('Conexión errónea');
-
-    $municipio = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
-
-    $tipo_animal = mysqli_query($conexion, "SELECT * FROM tbl_tipus_animal");
-
-    $raza = mysqli_query($conexion, "SELECT * FROM tbl_raca");
-
-?>
 <div class="widget">
 	<div class="navigation-orange-middle">
 		<div class="navigation-orange-top">&nbsp;</div>
@@ -1267,12 +1271,28 @@ Ofertas del día                            </h3>
     </div>
 </div> 
 
-
+    <!--
+    bd_botiga_animals
+    tbl_anunci:         anu_id, anu_tipus, anu_data, anu_foto, anu_nom, anu_contingut, contact_id, mun_id, raca_id
+    tbl_contacte:       contact_adre, contact_id, contact_nom, contact_telf
+    tbl_municipi:       municipi_id, municipi_nom
+    tbl_raca:           raca_id, raca_nom, tipus_anim_id
+    tbl_tipus_animal    tipus_anim_id, tipus_anim_nom
+    */ -->
 
 <!-- ZONA GRIS -->              
 <div class="full-grey-white-middle" style="border-radius: 6px;">
     <div class="text" style="padding: 5px 10px;">
-        <h2>Zooplus accesorios y comida para mascotas</h2>     
+        <h2>Resultados</h2>   
+        <?php
+        while ($datos = mysqli_fetch_array($anuncio)) {
+            echo "$datos['anu_id']";
+            echo "$datos['anu_tipus']";
+            echo "$datos['anu_data']";
+            echo "$datos['anu_foto']";
+            echo "$datos['anu_nom']";
+        }
+        ?>  
     </div>
 </div>
 
