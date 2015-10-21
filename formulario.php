@@ -1143,30 +1143,30 @@ Ofertas del día                            </h3>
                         <b>Nombre: </b><br />
                         <input type="text" name="nombre" maxlength="50" required /><br />
                         <b>Teléfono de contacto:</b> <br />
-                        <input type="text" name="telefono" pattern="^[9|6]\d{8}$" required />
+                        <input type="text" name="telefono" pattern="^[9|6]\d{8}$" maxlength="9" required />
                         <b>Dirección de contacto:</b> <br />
-                        <input type="text" name="direccion" /><br />
+                        <input type="text" name="direccion" maxlength="50" /><br />
                         <b>Tipo de anuncio:</b> <br />
                         <select name="anuncio2">
                             <option value="Perdido">Perdido</option>
                             <option value="Encontrado">Encontrado</option>
                         </select><br />
                         <b>Municipio:</b> <br />
-                        <input type="text" name="municipio2" required /><br />
+                        <input type="text" name="municipio2" maxlength="30" required /><br />
                         <b>Tipo de mascota:</b> <br />
                         <select name="tipo_animal2">
-                            <option value="Perro">Perro</option>
-                            <option value="Gato">Gato</option>
-                            <option value="Pájaro">Pájaro</option>
-                            <option value="Otros">Otros</option>
+                            <option value="1">Perro</option>
+                            <option value="2">Gato</option>
+                            <option value="3">Pájaro</option>
+                            <option value="4">Otros</option>
                         </select><br />
                         <b>Raza:</b> <br />
-                        <input type="text" name="raza2"><br />
+                        <input type="text" name="raza2" maxlength="30"><br />
                         <b>Título del anuncio:</b><br />
-                        <input type="text" name="titulo" required /><br />
+                        <input type="text" name="titulo" maxlength="50" required /><br />
                         <b>Descripción del anuncio:</b><br />
-                        <textarea type="text" name="contenido" required></textarea><br /><br />
-                        <input type="image" name="foto" value="Inserta tu foto" /><br /><br />
+                        <textarea type="text" name="contenido" maxlength="150" required></textarea><br /><br />
+                        <!--<input type="file" name="foto" value="Inserta tu foto" /><br /><br />-->
                         <input type="submit" name="enviar" value="Enviar" style="margin-left:110px;background-color:green" /><br />
                     </form>
                 </div>
