@@ -1098,7 +1098,7 @@ Ofertas del día                            </h3>
                             <option value="todo" selected>Todo</option>
                             <?php
                                 while ($opTipoAnimal = mysqli_fetch_array($tipo_animal)){
-                                    echo '<option value="'.$opTipoAnimal['tipus_anim_id'].'">'.$opTipoAnimal['tipus_anim_nom'].'</option>';
+                                    echo '<option value="'.$opTipoAnimal['tipus_anim_id'].'">'.utf8_encode($opTipoAnimal['tipus_anim_nom']).'</option>';
                                 }
                             ?>
                         </select><br />

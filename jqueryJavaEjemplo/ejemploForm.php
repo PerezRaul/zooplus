@@ -51,22 +51,24 @@
 </script>
     </head>
     <body>
-        <p>Marca: 
-        <select name="marca" id="marca">    
-            <option value="1">Perro</option>
-            <option value="2">Gato</option>
-            <option value="3">Pájaro</option>
-            <option value="3">Otros</option>    
-        </select></p>
-        <p>Modelo:
-        <select name="modelo" id="modelo">    
-            <option value="1">4</option>
-            <option value="2">5</option>
-            <option value="3">7</option>
-            <option value="4">21</option>
-            <option value="5">Scennic</option>
-            <option value="6">Traffic</option>
-        </select></p>
+        <b>Tipo de mascota:</b> <br />
+        <select name="tipo_animal">
+            <option value="todo" selected>Todo</option>
+            <?php
+                while ($opTipoAnimal = mysqli_fetch_array($tipo_animal)){
+                    echo '<option value="'.$opTipoAnimal['tipus_anim_id'].'">'.utf8_encode($opTipoAnimal['tipus_anim_nom']).'</option>';
+                }
+            ?>
+        </select><br />
+        <b>Raza:</b> <br />
+        <select name="raza">
+            <option value="todo" selected>Todo</option>
+             <?php
+                while ($opRaza = mysqli_fetch_array($raza)){
+                    echo '<option value="'.$opRaza['raca_id'].'">'.utf8_encode($opRaza['raca_nom']).'</option>';
+                }
+            ?>
+        </select><br />
         
     </body>
 </html>
