@@ -1093,16 +1093,6 @@ Ofertas del día                            </h3>
             <div class="full-grey-white-middle" style="border-radius: 6px; width:195px">
     			<div style="padding:0 12px 7px 12px;"><br>
                     <form name="busqueda">
-                        <b>Municipio:</b> <br />
-                        <select name="municipio">
-                            <option value="todo" selected>Todo</option>
-                            <?php
-
-                                while ($opMunicipio = mysqli_fetch_array($municipio)){
-                                    echo '<option value="'.$opMunicipio['municipi_id'].'">'.utf8_encode($opMunicipio['municipi_nom']).'</option>';
-                                }
-                            ?>
-                        </select><br />
                         <b>Tipo de mascota:</b> <br />
                         <select name="tipo_animal">
                             <option value="todo" selected>Todo</option>
@@ -1118,6 +1108,16 @@ Ofertas del día                            </h3>
                              <?php
                                 while ($opRaza = mysqli_fetch_array($raza)){
                                     echo '<option value="'.$opRaza['raca_id'].'">'.utf8_encode($opRaza['raca_nom']).'</option>';
+                                }
+                            ?>
+                        </select><br />
+                        <b>Municipio:</b> <br />
+                        <select name="municipio">
+                            <option value="todo" selected>Todo</option>
+                            <?php
+
+                                while ($opMunicipio = mysqli_fetch_array($municipio)){
+                                    echo '<option value="'.$opMunicipio['municipi_id'].'">'.utf8_encode($opMunicipio['municipi_nom']).'</option>';
                                 }
                             ?>
                         </select><br /><br />

@@ -19,7 +19,7 @@ catch (PDOException $e) {
 }
 
 /* Coger la id de contacto para meterla en la consulta de anuncios */
-$idContacte = mysqli_query($conn,'SELECT contact_id FROM tbl_contacte');
+$idContacte = "SELECT MAX(tbl_contacte.contact_id) AS idContacte FROM tbl_contacte";
 
 
 /* Insertar los datos de municipio */
@@ -34,7 +34,7 @@ catch (PDOException $e) {
 }
 
 /* Coger la id de municipio para meterla en la consulta de anuncios */
-$idMunicipi = mysqli_query($conn, "SELECT municipi_id FROM tbl_municipi");
+$idMunicipi = mysql_insert_id("SELECT municipi_id FROM tbl_municipi");
 
 
 /* Insertar los datos de raza */
@@ -46,12 +46,10 @@ try {
 }
 catch (PDOException $e) {
     echo 'Error en realitzar la consulta:'. $e->getMessage() . "<br/>";
-
-    $id_contacte = "SELECT contact_id FROM tbl_contacte INNER JOIN tbl_anunci ON tbl_contacte.contact_id=tbl_anunci.contact_id";
 }
 
 /* Coger la id de raza para meterla en la consulta de anuncios */
-$idRaca = mysqli_query($conn, "SELECT raca_id FROM tbl_raca");
+$idRaca = mysql_insert_id($conn);
 
 
 /* Insertar los datos de titulo, contenido, fecha, foto y tipo del anuncio */
