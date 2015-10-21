@@ -1,5 +1,7 @@
 <?php
 
+
+
 /* CONECTARSE A LA BASE DE DATOS */
 $usuario = "root";
 $pwd = "";
@@ -54,16 +56,27 @@ catch (PDOException $e) {
 }
 
 /* Insertar los datos de titulo, contenido, fecha, foto y tipo del anuncio */
-$InsSQL5 = "INSERT INTO tbl_tipus_animal (anu_contingut, anu_nom, anu_data, anu_foto, anu_tipus) VALUES (:anu_contingut, :anu_nom, :anu_data, :anu_foto, :anu_tipus)";
+$InsSQL5 = "INSERT INTO tbl_tipus_animal (anu_contingut, anu_nom, anu_data, /*anu_foto,*/ anu_tipus) VALUES (:anu_contingut, :anu_nom, :anu_data, /*:anu_foto,*/ :anu_tipus)";
 $stmt5 = $conn->prepare($InsSQL5);
 
 try {
-    $stmt5->execute(array(':anu_contingut' => $_POST['contenido'], ':anu_nom' => $_POST['titulo'], ':anu_data' => $_POST['fecha'], ':anu_foto' => $_POST['foto'], ':anu_tipus' => $_POST['anuncio2']));
+    $stmt5->execute(array(':anu_contingut' => $_POST['contenido'], ':anu_nom' => $_POST['titulo'], ':anu_data' => date("y/m/d"), /*':anu_foto' => $_POST['foto'],*/ ':anu_tipus' => $_POST['anuncio2']));
 }
 catch (PDOException $e) {
     echo 'Error en realitzar la consulta:'. $e->getMessage() . "<br/>";
 }
 
+/*$ruta = "fotos/";
+$ruta = $ruta . basename( $_FILES['uploadedfile']['name']); if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) { 
+    echo "El archivo ". basename( $_FILES['uploadedfile']['name']). " ha sido subido";
+
+} else{
+    echo "Ha ocurrido un error, trate de nuevo!";
+}*/
+
 $stmt->closeCursor();
+$stmt2->closeCursor();
+$stmt3->closeCursor();
+$stmt4->closeCursor();
 
 ?>
