@@ -23,8 +23,10 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0022)http://www.zooplus.es/ -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" class=" dk_fouc"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" class=" dk_fouc"><head>
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" media="screen" href="./css/web-styles.css">
 <link rel="stylesheet" type="text/css" media="screen" href="./css/web-styles-shop5.css">
 <link rel="stylesheet" type="text/css" media="screen" href="./css/flyoutNavigation.css">
@@ -1091,19 +1093,13 @@ Ofertas del día                            </h3>
             <div class="full-grey-white-middle" style="border-radius: 6px; width:195px">
     			<div style="padding:0 12px 7px 12px;"><br>
                     <form name="busqueda">
-                        <b>Tipo de anuncio:</b> <br />
-                        <select name="anuncio">
-                            <option value="todo" selected>Todo</option>
-                            <option value="perdido">Perdido</option>
-                            <option value="encontrado">Encontrado</option>
-                        </select><br />
                         <b>Municipio:</b> <br />
                         <select name="municipio">
                             <option value="todo" selected>Todo</option>
                             <?php
 
                                 while ($opMunicipio = mysqli_fetch_array($municipio)){
-                                    echo '<option value="'.$opMunicipio['municipi_id'].'">'.$opMunicipio['municipi_nom'].'</option>';
+                                    echo '<option value="'.$opMunicipio['municipi_id'].'">'.utf8_encode($opMunicipio['municipi_nom']).'</option>';
                                 }
                             ?>
                         </select><br />
@@ -1121,7 +1117,7 @@ Ofertas del día                            </h3>
                             <option value="todo" selected>Todo</option>
                              <?php
                                 while ($opRaza = mysqli_fetch_array($raza)){
-                                    echo '<option value="'.$opRaza['raca_id'].'">'.$opRaza['raca_nom'].'</option>';
+                                    echo '<option value="'.$opRaza['raca_id'].'">'.utf8_encode($opRaza['raca_nom']).'</option>';
                                 }
                             ?>
                         </select><br /><br />
@@ -1203,8 +1199,7 @@ Ofertas del día                            </h3>
                     OA_show(69);
                 }
                 // ]]> -->
-            </script><a href="http://pictures.zooplus.com/zoodog?oaparams=2__bannerid=9142__zoneid=69__cb=e9b44d3d70__oadest=http%3A%2F%2Fwww.zooplus.es%2Fcontent%2Fadvantages" target="_self"><img src="./image/6a540497846bb39fc4bdf4ec979fb933.jpg" width="157" height="182" alt="(R3)" title="(R3)" border="0"></a><div id="beacon_e9b44d3d70" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./image/zoohamster(2)" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
-
+            </script>
         </div>
         <noscript>
             &lt;div class="zone"&gt;
@@ -1221,8 +1216,7 @@ Ofertas del día                            </h3>
                     OA_show(70);
                 }
                 // ]]> -->
-            </script><a href="http://pictures.zooplus.com/zoodog?oaparams=2__bannerid=5848__zoneid=70__cb=a04035d8b8__oadest=https%3A%2F%2Fwww.zooplus.es%2Fnewsletter%2F%3Futm_source%3Dzooadserver%26utm_medium%3Dnewsletter_banner_ES%26utm_campaign%3Dnewsletter_banner_R3_E_ES" target="_self"><img src="./image/67c70f998aa810e7b507e5ef0ba57b6b.jpg" width="157" height="140" alt="Newsletter (3)" title="Newsletter (3)" border="0"></a><div id="beacon_a04035d8b8" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./image/zoohamster(3)" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
-
+            </script>
         </div>
         <noscript>
             &lt;div class="zone"&gt;
