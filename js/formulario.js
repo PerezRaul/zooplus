@@ -1,4 +1,3 @@
-
 /* bd_botiga_animals
     ---------------------
     tbl_anunci:         anu_contingut, anu_data, anu_foto, anu_id, anu_nom, anu_tipus, contact_id, mun_id, raca_id

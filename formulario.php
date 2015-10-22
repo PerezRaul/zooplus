@@ -1114,15 +1114,10 @@ Ofertas del día                            </h3>
                                 }
                             ?>
                         </select><br />
-                        <b>Raza:</b> <br />
-                        <select name="raza" id="raza">
-                            <!--<option value="null">Todo</option>
-                            <?php
-                                while($row= mysqli_fetch_array($raza)){
-                                    echo '<option value="'.$row['raca_id'].'">'.utf8_encode($row['raca_nom']).'</option>';
-                                }
-                            ?>-->
-                        </select><br />
+                        <div id="divraza" style="display:none">
+                            <b>Raza:</b><br />
+                            <select name="raza" id="raza"></select><br />
+                        </div>
                         <b>Municipio:</b> <br />
                         <select name="municipio" id="municipio">
                             <option value="todo" selected>Todo</option>
