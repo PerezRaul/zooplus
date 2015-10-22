@@ -37,38 +37,33 @@
 
         <script language="javascript" src="jquery-2.1.4.min.js"></script>
         <script language="javascript">
-        $(document).ready(function(){
-           $("#marca").change(function () {
-                   $("#marca option:selected").each(function () {
-                    elegido=$(this).val();
-                    $.post("modelos.php", { elegido: elegido }, function(data){
-                    $("#modelo").html(data);
-                    });            
+                $(document).ready(function(){
+                   $("#marca").change(function () {
+                           $("#marca option:selected").each(function () {
+                            elegido=$(this).val();
+                            $.post("modelos.php", { elegido: elegido }, function(data){
+                            $("#modelo").html(data);
+                            });            
+                        });
+                   })
                 });
-           })
-        });
-</script>
-</script>
+        </script>
     </head>
     <body>
-        <b>Tipo de mascota:</b> <br />
-        <select name="tipo_animal">
-            <option value="todo" selected>Todo</option>
-            <?php
-                while ($opTipoAnimal = mysqli_fetch_array($tipo_animal)){
-                    echo '<option value="'.$opTipoAnimal['tipus_anim_id'].'">'.utf8_encode($opTipoAnimal['tipus_anim_nom']).'</option>';
-                }
-            ?>
-        </select><br />
-        <b>Raza:</b> <br />
-        <select name="raza">
-            <option value="todo" selected>Todo</option>
-             <?php
-                while ($opRaza = mysqli_fetch_array($raza)){
-                    echo '<option value="'.$opRaza['raca_id'].'">'.utf8_encode($opRaza['raca_nom']).'</option>';
-                }
-            ?>
-        </select><br />
-        
+        <p>Marca: 
+        <select name="marca" id="marca">    
+            <option value="1">Renault</option>
+            <option value="2">Seat</option>
+            <option value="3">Peugeot</option>    
+        </select></p>
+        <p>Modelo:
+        <select name="modelo" id="modelo">    
+            <option value="1">4</option>
+            <option value="2">5</option>
+            <option value="3">7</option>
+            <option value="4">21</option>
+            <option value="5">Scennic</option>
+            <option value="6">Traffic</option>
+        </select></p>
     </body>
 </html>

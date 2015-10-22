@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.4.12
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-10-2015 a las 00:24:54
--- Versión del servidor: 5.6.26
--- Versión de PHP: 5.5.28
+-- Tiempo de generación: 22-10-2015 a las 14:33:51
+-- Versión del servidor: 5.6.25
+-- Versión de PHP: 5.6.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bd_botiga_animals`
 --
-CREATE DATABASE IF NOT EXISTS `bd_botiga_animals` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `bd_botiga_animals` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `bd_botiga_animals`;
 
 -- --------------------------------------------------------
@@ -30,23 +30,23 @@ USE `bd_botiga_animals`;
 
 CREATE TABLE IF NOT EXISTS `tbl_anunci` (
   `anu_id` int(11) NOT NULL,
-  `anu_contingut` varchar(255) NOT NULL,
-  `anu_nom` varchar(25) NOT NULL,
-  `anu_data` date NOT NULL,
-  `anu_foto` varchar(50) NOT NULL,
+  `anu_contingut` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `anu_nom` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `anu_data` date DEFAULT NULL,
+  `anu_foto` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `raca_id` int(11) NOT NULL,
   `mun_id` int(11) NOT NULL,
   `contact_id` int(11) NOT NULL,
-  `anu_tipus` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `anu_tipus` varchar(10) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tbl_anunci`
 --
 
 INSERT INTO `tbl_anunci` (`anu_id`, `anu_contingut`, `anu_nom`, `anu_data`, `anu_foto`, `raca_id`, `mun_id`, `contact_id`, `anu_tipus`) VALUES
-(1, 'Perdut gos de raça beagle a la platja de El Prat de Llobregat (zona aeroport) l''11 d''octubre al matí. Respon al nom de Tacat.', 'Perdut beagle a El Prat', '2015-10-11', 'tacat.jpg', 14, 4, 2, 'Perdut'),
-(2, 'Desaparegut gat amb collar i placa amb el nom de Ratlletes. És de tipus comú, ratllat de colors taronges. Rambla Badal, Barcelona.', 'Perdut gat', '2015-10-15', '', 17, 1, 6, 'Pedut');
+(1, 'Perro perdido de raza beagle en la playa de el Prat de Llobregat (zona aeropuerto) el 11 de octubre por la mañana. Responde al nombre de Tacat.', 'Beagle perdido en el Prat', '2015-10-11', 'tacat.jpg', 14, 4, 2, 'Perdido'),
+(2, 'Gato desaparecido con collar y placa con el nombre de Ratlletes. Es de tipo común, rallado de colores naranjas. Rambla Badal, Barcelona.', 'Gato perdido', '2015-10-15', '', 17, 1, 6, 'Perdido');
 
 -- --------------------------------------------------------
 
@@ -56,10 +56,10 @@ INSERT INTO `tbl_anunci` (`anu_id`, `anu_contingut`, `anu_nom`, `anu_data`, `anu
 
 CREATE TABLE IF NOT EXISTS `tbl_contacte` (
   `contact_id` int(11) NOT NULL,
-  `contact_nom` varchar(25) NOT NULL,
-  `contact_telf` varchar(9) NOT NULL,
-  `contact_adre` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+  `contact_nom` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `contact_telf` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
+  `contact_adre` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tbl_contacte`
@@ -82,8 +82,8 @@ INSERT INTO `tbl_contacte` (`contact_id`, `contact_nom`, `contact_telf`, `contac
 
 CREATE TABLE IF NOT EXISTS `tbl_municipi` (
   `municipi_id` int(11) NOT NULL,
-  `municipi_nom` varchar(25) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+  `municipi_nom` varchar(25) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tbl_municipi`
@@ -104,7 +104,8 @@ INSERT INTO `tbl_municipi` (`municipi_id`, `municipi_nom`) VALUES
 (12, 'Sant Sadurní d''Anoia'),
 (13, 'Rubí'),
 (14, 'Sant Cugat del Vallès'),
-(15, 'Sitges');
+(15, 'Sitges'),
+(16, 'Otro');
 
 -- --------------------------------------------------------
 
@@ -114,9 +115,9 @@ INSERT INTO `tbl_municipi` (`municipi_id`, `municipi_nom`) VALUES
 
 CREATE TABLE IF NOT EXISTS `tbl_raca` (
   `raca_id` int(11) NOT NULL,
-  `raca_nom` varchar(25) NOT NULL,
+  `raca_nom` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `tipus_anim_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tbl_raca`
@@ -141,7 +142,11 @@ INSERT INTO `tbl_raca` (`raca_id`, `raca_nom`, `tipus_anim_id`) VALUES
 (23, 'Conill', 4),
 (24, 'Hàmster', 4),
 (25, 'Teixó', 4),
-(26, 'Ànec', 4);
+(26, 'Ànec', 4),
+(27, 'Otra raza de perro', 1),
+(28, 'Otra raza de gato', 2),
+(29, 'Otra raza de pájaro', 3),
+(30, 'Otra raza', 4);
 
 -- --------------------------------------------------------
 
@@ -151,18 +156,18 @@ INSERT INTO `tbl_raca` (`raca_id`, `raca_nom`, `tipus_anim_id`) VALUES
 
 CREATE TABLE IF NOT EXISTS `tbl_tipus_animal` (
   `tipus_anim_id` int(11) NOT NULL,
-  `tipus_anim_nom` varchar(25) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `tipus_anim_nom` varchar(25) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `tbl_tipus_animal`
 --
 
 INSERT INTO `tbl_tipus_animal` (`tipus_anim_id`, `tipus_anim_nom`) VALUES
-(1, 'Gos'),
-(2, 'Gat'),
-(3, 'Ocell'),
-(4, 'Altres');
+(1, 'Perro'),
+(2, 'Gato'),
+(3, 'Pájaro'),
+(4, 'Otros');
 
 --
 -- Índices para tablas volcadas
@@ -210,22 +215,22 @@ ALTER TABLE `tbl_tipus_animal`
 -- AUTO_INCREMENT de la tabla `tbl_anunci`
 --
 ALTER TABLE `tbl_anunci`
-  MODIFY `anu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `anu_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `tbl_contacte`
 --
 ALTER TABLE `tbl_contacte`
-  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT de la tabla `tbl_municipi`
 --
 ALTER TABLE `tbl_municipi`
-  MODIFY `municipi_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `municipi_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `tbl_raca`
 --
 ALTER TABLE `tbl_raca`
-  MODIFY `raca_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
+  MODIFY `raca_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tipus_animal`
 --

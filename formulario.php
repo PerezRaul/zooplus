@@ -15,9 +15,13 @@
 
     $municipio = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
 
+    $municipio2 = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
+
     $tipo_animal = mysqli_query($conexion, "SELECT * FROM tbl_tipus_animal");
 
     $raza = mysqli_query($conexion, "SELECT * FROM tbl_raca");
+
+    $raza2 = mysqli_query($conexion, "SELECT * FROM tbl_raca");
 
 ?>
 
@@ -1115,7 +1119,6 @@ Ofertas del día                            </h3>
                         <select name="municipio">
                             <option value="todo" selected>Todo</option>
                             <?php
-
                                 while ($opMunicipio = mysqli_fetch_array($municipio)){
                                     echo '<option value="'.$opMunicipio['municipi_id'].'">'.utf8_encode($opMunicipio['municipi_nom']).'</option>';
                                 }
@@ -1135,7 +1138,7 @@ Ofertas del día                            </h3>
         <span style="font-size:18px;color:green"><b>¡Pon tu anuncio!</b></span>
             <div class="full-grey-white-middle" style="border-radius: 6px; width:195px">
                 <div style="padding:0 12px 7px 12px;"><br>
-                    <form name="insertar" action="insertarDatos.php" method="post">
+                    <form name="insertar" action="insertarDatos.php" method="get">
                         <b>Nombre: </b><br />
                         <input type="text" name="nombre" maxlength="50" required /><br />
                         <b>Teléfono de contacto:</b> <br />
@@ -1147,8 +1150,14 @@ Ofertas del día                            </h3>
                             <option value="Perdido">Perdido</option>
                             <option value="Encontrado">Encontrado</option>
                         </select><br />
-                        <b>Municipio:</b> <br />
-                        <input type="text" name="municipio2" maxlength="30" required /><br />
+                        <b>Municipio:</b><br />
+                        <select name="municipio2">
+                            <?php
+                                while ($opMunicipio = mysqli_fetch_array($municipio2)){
+                                    echo '<option value="'.$opMunicipio['municipi_id'].'">'.utf8_encode($opMunicipio['municipi_nom']).'</option>';
+                                }
+                            ?>
+                        </select><br />
                         <b>Tipo de mascota:</b> <br />
                         <select name="tipo_animal2">
                             <option value="1">Perro</option>
@@ -1157,7 +1166,13 @@ Ofertas del día                            </h3>
                             <option value="4">Otros</option>
                         </select><br />
                         <b>Raza:</b> <br />
-                        <input type="text" name="raza2" maxlength="30"><br />
+                        <select name="raza2">
+                             <?php
+                                while ($opRaza = mysqli_fetch_array($raza2)){
+                                    echo '<option value="'.$opRaza['raca_id'].'">'.utf8_encode($opRaza['raca_nom']).'</option>';
+                                }
+                            ?>
+                        </select><br />
                         <b>Título del anuncio:</b><br />
                         <input type="text" name="titulo" maxlength="50" required /><br />
                         <b>Descripción del anuncio:</b><br />
