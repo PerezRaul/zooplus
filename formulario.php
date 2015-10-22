@@ -1,9 +1,5 @@
 <?php
 
-	include 'mostrarDatos.php';
-	
-    $fTipoAnimal = 0;
-
     /* bd_botiga_animals
     ---------------------
     tbl_anunci:         anu_contingut, anu_data, anu_foto, anu_id, anu_nom, anu_tipus, contact_id, mun_id, raca_id
@@ -12,6 +8,8 @@
     tbl_raca:           raca_id, raca_nom, tipus_anim_id
     tbl_tipus_animal    tipus_anim_id, tipus_anim_nom
     */
+
+    include 'mostrarDatos.php';
 
     $conexion = mysqli_connect('localhost','root','','bd_botiga_animals') or die ('Conexión errónea');
 
@@ -1181,7 +1179,7 @@ Ofertas del día                            </h3>
                         <b>Descripción del anuncio:</b><br />
                         <textarea type="text" name="contenido" id="contenido" maxlength="150" required></textarea><br /><br />
                         <b>Foto de tu mascota:</b><br />
-                        <input type="file" name="foto" value="Inserta tu foto" /><br /><br />
+                        <input type="file" name="foto" id="foto" value="Inserta tu foto" /><br /><br />
                         <input type="submit" name="enviar" value="Enviar" style="margin-left:110px;background-color:green" /><br />
                     </form>
                 </div>
@@ -1347,10 +1345,8 @@ Ofertas del día                            </h3>
     <div class="text" style="padding: 5px 10px;">
         <h2>Resultados</h2>   
         <?php
-            
             mostrarDatos();
-        ?>
-        
+        ?>  
     </div>
 </div>
 
