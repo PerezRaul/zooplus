@@ -27,13 +27,10 @@
 
 	} else {
 
-		$raza=mysqli_query($conexion,"SELECT * FROM tbl_raca");
-
-		while($row= mysqli_fetch_array($raza)){
-				echo '<option value="'.$row['raca_id'].'">'.utf8_encode($row['raca_nom']).'</option>';
-		}
+		echo "$('#raza').attr('disabled', 'disabled')";
 
 	}
+
 
 	/* Filtrar selects del formulario de insertar anuncios */
 
