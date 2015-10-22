@@ -1120,7 +1120,7 @@ Ofertas del día                            </h3>
                         </div>
                         <b>Municipio:</b> <br />
                         <select name="municipio" id="municipio">
-                            <option value="todo" selected>Todo</option>
+                            <option value="null" selected>Todo</option>
                             <?php
                                 while ($opMunicipio = mysqli_fetch_array($municipio)){
                                     echo '<option value="'.$opMunicipio['municipi_id'].'">'.utf8_encode($opMunicipio['municipi_nom']).'</option>';
