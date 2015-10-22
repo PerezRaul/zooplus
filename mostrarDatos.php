@@ -56,14 +56,12 @@ function mostrarDatos(){
 		$qDatos = mysqli_query($conexion,$sql);
 		
 		while ($mostrarqDatos = mysqli_fetch_array($qDatos)) {
-			echo "$mostrarqDatos[anu_data]<br/>";
+			echo utf8_encode("$mostrarqDatos[anu_data]<br/>");
+			echo "$mostrarqDatos[anu_tipus]<br/>";
 			echo "$mostrarqDatos[anu_nom]<br/>";
-			echo "$mostrarqDatos[anu_contingut]<br/>";
-			echo "$mostrarqDatos[anu_tipus]<br/>";
-			echo "$mostrarqDatos[anu_tipus]<br/>";
-			echo "$mostrarqDatos[anu_tipus]<br/>";
-			echo "$mostrarqDatos[anu_tipus]<br/>";
-			echo "$mostrarqDatos[anu_tipus]<br/>";
+			echo utf8_encode("$mostrarqDatos[anu_contingut]<br/>");
+			
+			
 		}
 		
 }
