@@ -1112,12 +1112,12 @@ Ofertas del día                            </h3>
                         </select><br />
                         <b>Raza:</b> <br />
                         <select name="raza" id="raza">
-                            <option value="null">Todo</option>
+                            <!--<option value="null">Todo</option>
                             <?php
                                 while($row= mysqli_fetch_array($raza)){
                                     echo '<option value="'.$row['raca_id'].'">'.utf8_encode($row['raca_nom']).'</option>';
                                 }
-                            ?>
+                            ?>-->
                         </select><br />
                         <b>Municipio:</b> <br />
                         <select name="municipio" id="municipio">
@@ -1171,7 +1171,7 @@ Ofertas del día                            </h3>
                         </select><br />
                         <b>Raza:</b> <br />
                         <select name="raza2" id="raza2">
-                             <?php
+                            <?php
                                 while ($opRaza = mysqli_fetch_array($raza2)){
                                     echo '<option value="'.$opRaza['raca_id'].'">'.utf8_encode($opRaza['raca_nom']).'</option>';
                                 }
@@ -1181,7 +1181,8 @@ Ofertas del día                            </h3>
                         <input type="text" name="titulo" id="titulo" maxlength="50" required /><br />
                         <b>Descripción del anuncio:</b><br />
                         <textarea type="text" name="contenido" id="contenido" maxlength="150" required></textarea><br /><br />
-                        <!--<input type="file" name="foto" value="Inserta tu foto" /><br /><br />-->
+                        <b>Foto de tu mascota:</b><br />
+                        <input type="file" name="foto" value="Inserta tu foto" /><br /><br />
                         <input type="submit" name="enviar" value="Enviar" style="margin-left:110px;background-color:green" /><br />
                     </form>
                 </div>
