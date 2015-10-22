@@ -11,15 +11,21 @@
 
     $conexion = mysqli_connect('localhost','root','','bd_botiga_animals') or die ('Conexión errónea');
 
-    $anuncio = mysqli_query($conexion,'SELECT * FROM tbl_anunci');
-
-    $municipio = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
-
-    $municipio2 = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
-
     $tipo_animal = mysqli_query($conexion, "SELECT * FROM tbl_tipus_animal");
 
     $raza = mysqli_query($conexion, "SELECT * FROM tbl_raca");
+
+    $municipio = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
+
+/*<<<<<<< HEAD
+    $anuncio = mysqli_query($conexion, 'SELECT * FROM tbl_anunci');
+=======
+    $municipio2 = mysqli_query($conexion, 'SELECT * FROM tbl_municipi');
+
+    $tipo_animal = mysqli_query($conexion, "SELECT * FROM tbl_tipus_animal");
+>>>>>>> 4db37391570712e70ea59b960eff156247594b87*/
+
+    
 
     $raza2 = mysqli_query($conexion, "SELECT * FROM tbl_raca");
 
@@ -35,34 +41,12 @@
 <link rel="stylesheet" type="text/css" media="screen" href="./css/web-styles-shop5.css">
 <link rel="stylesheet" type="text/css" media="screen" href="./css/flyoutNavigation.css">
 <link rel="stylesheet" type="text/css" media="screen" href="./css/styles.css">
-<!--[if lt IE 9]><link rel="stylesheet" type="text/css" media="screen" href="http://media11.mediazs.com/theme/zooplus/zooplus.es/css/ie7_patch.css" />
-<![endif]--><script type="text/javascript" async="" src="./image/Resonance.aspx"></script><script type="text/javascript" async="" src="./js/ga.js"></script><script language="javascript" src="./js/jquery-1.4.3min.js" type="text/javascript"></script>
-<script language="javascript" src="./js/standard.js" type="text/javascript"></script>
-<script language="javascript" src="./js/productCart.js" type="text/javascript"></script>
-<!--[if lt IE 9]><script language="javascript" src="http://media11.mediazs.com/theme/zooplus/zooplus.es/javascript/ieFixes.js"  type="text/javascript"></script>
-<![endif]-->
-<script language="javascript" src="./js/xbrowserfixes.js" type="text/javascript"></script>
-<script type="text/javascript" src="./js/resonance.js" async="" defer=""></script>
-<script type="text/javascript" src="./js/satelliteLib-60fda947b5097be6df8f1fa662328713bf33fe9d.js"> </script>
-<script type="text/javascript"> if (typeof getZoohippo == 'function'){getZoohippo(6, 'http', 'www.zooplus.es')};</script><script src="./js/zoohippo" type="text/javascript"></script><script type="text/javascript" src="./js/zooelephant"></script><script type="text/javascript" src="./js/zoorat"></script>
+<script src="./js/jquery-1.4.3min.js"></script>
+<script src="./js/formulario.js"></script>
 
-<link media="only screen and (max-width: 640px)" rel="alternate" href="http://m.zooplus.es/web/shop/homepage.htm">
-<link media="handheld" rel="alternate" href="http://m.zooplus.es/web/shop/homepage.htm">
 <link rel="SHORTCUT ICON" href="http://www.zooplus.es/favicon.ico">
 
 <title>Mascotas perdidas - Zooplus</title>
-
-<meta http-equiv="Language" content="es,spanish">
-<meta name="Author" content="zooplus AG">
-<meta name="Publisher" content="zooplus AG">
-<meta name="Copyright" content="zooplus AG">
-<meta name="Keywords" content="pienso para perros, pienso para gatos, comida para perros, comida para gatos, tienda animales, rascadores para gatos, arena para gatos, juguetes para perros, comederos, bebederos, comida húmeda, latas para gatos, jaulas, accesorios para mascotas, antiparasitarios, pienso veterinario, dieta veterinaria, transportines para perros, casetas para perros, correas y collares, camas para perros, camas para gatos">
-<meta name="Description" content="zooplus - Tu tienda para mascotas online líder en Europa y España: los precios más bajos en pienso, comida húmeda y accesorios para perros, gatos y pequeños animales. Entrega gratuita a partir de 39€">
-<meta name="Robots" content="Index, follow">
-<meta http-equiv="Expires" content="0">
-<meta http-equiv="cache-control" content="no-cache">
-<meta http-equiv="pragma" content="no-cache">
-<!-- key <shop.codesnippet.maxymiser> not found --><script src="./js/s-code-contents-ee4d6d796de600e0c9db8376f9187896f10241a3.js"></script><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head><body cz-shortcut-listen="true">
 
 <script type="text/javascript">
     <!--// <![CDATA[
@@ -1087,7 +1071,6 @@ Ofertas del día                            </h3>
     </script>
 </div>
 
-
 <!-- formulario daw-->
 
 <div class="widget">
@@ -1096,10 +1079,10 @@ Ofertas del día                            </h3>
         <span style="font-size:18px;color:green"><b>¡Encuentra tu mascota!</b></span>
             <div class="full-grey-white-middle" style="border-radius: 6px; width:195px">
     			<div style="padding:0 12px 7px 12px;"><br>
-                    <form name="busqueda">
+                    <form name="busqueda" action="formulario.php" method="GET">
                         <b>Tipo de mascota:</b> <br />
-                        <select name="tipo_animal">
-                            <option value="todo" selected>Todo</option>
+                        <select name="tipo_animal" id="tipo_animal" onchange="cargarRaza();">
+                            <option value="null">Todo</option>
                             <?php
                                 while ($opTipoAnimal = mysqli_fetch_array($tipo_animal)){
                                     echo '<option value="'.$opTipoAnimal['tipus_anim_id'].'">'.utf8_encode($opTipoAnimal['tipus_anim_nom']).'</option>';
@@ -1107,13 +1090,9 @@ Ofertas del día                            </h3>
                             ?>
                         </select><br />
                         <b>Raza:</b> <br />
-                        <select name="raza">
-                            <option value="todo" selected>Todo</option>
-                             <?php
-                                while ($opRaza = mysqli_fetch_array($raza)){
-                                    echo '<option value="'.$opRaza['raca_id'].'">'.utf8_encode($opRaza['raca_nom']).'</option>';
-                                }
-                            ?>
+                        <select name="raza" id="raza">
+                            <option value="null">Todo</option>
+                             
                         </select><br />
                         <b>Municipio:</b> <br />
                         <select name="municipio">
