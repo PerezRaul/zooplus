@@ -1,3 +1,14 @@
+.buscarMascota{
+  position: relative;
+  margin: 0;
+  border-radius: 6px;
+  background-image: url(../image/perro.png);
+  background-repeat: no-repeat;
+  width: 762px; 
+  height: 113px;
+
+}
+
 /* customized screen sizes (used for media queries) */
 /* brand Z+ colors */
 /* gradient colors */

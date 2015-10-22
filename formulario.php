@@ -1340,15 +1340,16 @@ Ofertas del día                            </h3>
     tbl_tipus_animal    tipus_anim_id, tipus_anim_nom
     */ -->
 
-<!-- ZONA GRIS -->              
-<div class="full-grey-white-middle" style="border-radius: 6px;">
-    <div class="text" style="padding: 5px 10px;">
-        <h2>Resultados</h2>   
-        <?php
-            mostrarDatos();
-        ?>  
+<!-- ZONA GRIS -->
+    <div class="buscarMascota"></div>              
+    <div class="full-grey-white-middle" style="border-radius: 6px;">
+        <div class="text" style="padding: 5px 10px;">
+            <h2>Resultados</h2>   
+            <?php
+                mostrarDatos();
+            ?>  
+        </div>
     </div>
-</div>
 
 
 <!-- Zone-Region: CENTER_BOTTOM -->
