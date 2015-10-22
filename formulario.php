@@ -1,5 +1,7 @@
 <?php
 
+	include 'mostrarDatos.php';
+	
     /* bd_botiga_animals
     ---------------------
     tbl_anunci:         anu_contingut, anu_data, anu_foto, anu_id, anu_nom, anu_tipus, contact_id, mun_id, raca_id
@@ -1342,15 +1344,7 @@ Ofertas del día                            </h3>
 <div class="full-grey-white-middle" style="border-radius: 6px;">
     <div class="text" style="padding: 5px 10px;">
         <h2>Resultados</h2>   
-        <?php
-        while ($datos = mysqli_fetch_array($anuncio)) {
-            echo "$datos[anu_id]<br/>";
-            echo "$datos[anu_tipus]<br/>";
-            echo "$datos[anu_data]<br/>";
-            echo "$datos[anu_foto]<br/>";
-            echo "$datos[anu_nom]<br/><br/>";
-        }
-        ?>  
+        
     </div>
 </div>
 
