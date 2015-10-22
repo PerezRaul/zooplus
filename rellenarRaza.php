@@ -19,6 +19,8 @@
 
 	if ($tipo_animal > 0){
 
+		echo '<script>$(document).ready(function(){$("#divraza").show();});</script>';
+
 		$raza=mysqli_query($conexion,"SELECT * FROM tbl_raca WHERE tipus_anim_id = '$tipo_animal'");
 
 		while($row= mysqli_fetch_array($raza)){
@@ -27,7 +29,7 @@
 
 	} else {
 
-		echo "$('#raza').attr('disabled', 'disabled')";
+		echo '<script>$(document).ready(function(){$("#divraza").hide();});</script>';
 
 	}
 
