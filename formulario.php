@@ -2,6 +2,8 @@
 
 	include 'mostrarDatos.php';
 	
+    $fTipoAnimal = 0;
+
     /* bd_botiga_animals
     ---------------------
     tbl_anunci:         anu_contingut, anu_data, anu_foto, anu_id, anu_nom, anu_tipus, contact_id, mun_id, raca_id
@@ -1348,6 +1350,10 @@ Ofertas del día                            </h3>
 <div class="full-grey-white-middle" style="border-radius: 6px;">
     <div class="text" style="padding: 5px 10px;">
         <h2>Resultados</h2>   
+        <?php
+            
+            mostrarDatos();
+        ?>
         
     </div>
 </div>
