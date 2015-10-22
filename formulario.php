@@ -1139,7 +1139,7 @@ Ofertas del día                            </h3>
         <span style="font-size:18px;color:green"><b>¡Pon tu anuncio!</b></span>
             <div class="full-grey-white-middle" style="border-radius: 6px; width:195px">
                 <div style="padding:0 12px 7px 12px;"><br>
-                    <form name="insertar" id="insertar" action="insertarDatos.php" method="post">
+                    <form name="insertar" id="insertar" action="insertarDatos.php" method="post" enctype="multipart/form-data">
                         <b>Nombre: </b><br />
                         <input type="text" name="nombre" id="name" maxlength="50" required /><br />
                         <b>Teléfono de contacto:</b> <br />
@@ -1179,7 +1179,7 @@ Ofertas del día                            </h3>
                         <b>Descripción del anuncio:</b><br />
                         <textarea type="text" name="contenido" id="contenido" maxlength="150" required></textarea><br /><br />
                         <b>Foto de tu mascota:</b><br />
-                        <input type="file" name="foto" id="foto" value="Inserta tu foto" /><br /><br />
+                        <input type="file" name="foto" id="foto" /><br /><br />
                         <input type="submit" name="enviar" value="Enviar" style="margin-left:110px;background-color:green" /><br />
                     </form>
                 </div>
