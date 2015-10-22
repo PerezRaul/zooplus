@@ -21,7 +21,7 @@ mysqli_query($con, $InsSQL2);
 
 /* Falta poner anu_foto en el insert de anunci */
 
-echo "<script>alert('¡Tu consulta ha sido satisfactória!')</script>";
+/*echo "<script>alert('¡Tu consulta ha sido satisfactória!')</script>";*/
 
 header("Location: formulario.php");
 

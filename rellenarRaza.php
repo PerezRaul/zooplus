@@ -17,10 +17,22 @@
 
 	$tipo_animal = $_REQUEST['tipo_animal'];
 
-	$raza=mysqli_query($conexion,"SELECT * FROM tbl_raca WHERE tipus_anim_id = '$tipo_animal'");
+	if ($tipo_animal > 0){
 
-	while($row= mysqli_fetch_array($raza)){
-			echo '<option value="'.$row['raca_id'].'">'.utf8_encode($row['raca_nom']).'</option>';
+		$raza=mysqli_query($conexion,"SELECT * FROM tbl_raca WHERE tipus_anim_id = '$tipo_animal'");
+
+		while($row= mysqli_fetch_array($raza)){
+				echo '<option value="'.$row['raca_id'].'">'.utf8_encode($row['raca_nom']).'</option>';
+		}
+
+	} else {
+
+		$raza=mysqli_query($conexion,"SELECT * FROM tbl_raca");
+
+		while($row= mysqli_fetch_array($raza)){
+				echo '<option value="'.$row['raca_id'].'">'.utf8_encode($row['raca_nom']).'</option>';
+		}
+
 	}
 
 	/* Filtrar selects del formulario de insertar anuncios */
