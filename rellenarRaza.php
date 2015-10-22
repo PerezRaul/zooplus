@@ -1,4 +1,3 @@
-
 <?php
 
 	/* bd_botiga_animals
@@ -10,13 +9,27 @@
     tbl_tipus_animal    tipus_anim_id, tipus_anim_nom
     */
 
+    /* Conexion de la base de datos */
+
 	$conexion = mysqli_connect('localhost','root','','bd_botiga_animals') or die ('Conexión errónea');
+
+	/* Filtrar selects del formulario de busqueda */
 
 	$tipo_animal = $_REQUEST['tipo_animal'];
 
 	$raza=mysqli_query($conexion,"SELECT * FROM tbl_raca WHERE tipus_anim_id = '$tipo_animal'");
 
 	while($row= mysqli_fetch_array($raza)){
+			echo '<option value="'.$row['raca_id'].'">'.utf8_encode($row['raca_nom']).'</option>';
+	}
+
+	/* Filtrar selects del formulario de insertar anuncios */
+
+	$tipo_animal2 = $_REQUEST['tipo_animal2'];
+
+	$raza2=mysqli_query($conexion,"SELECT * FROM tbl_raca WHERE tipus_anim_id = '$tipo_animal2'");
+
+	while($row= mysqli_fetch_array($raza2)){
 			echo '<option value="'.$row['raca_id'].'">'.utf8_encode($row['raca_nom']).'</option>';
 	}
 ?>
