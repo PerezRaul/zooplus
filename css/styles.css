@@ -38,6 +38,7 @@
 
 .titularBusqueda li{
   display: inline-block;
+  padding-right: 5px;
 }
 
 .fotoBusqueda{
@@ -53,6 +54,7 @@
 .bottomBusqueda{
   background-image: url(../image/table.gif);
 }
+
 
 /* customized screen sizes (used for media queries) */
 /* brand Z+ colors */
@@ -1088,4 +1090,8 @@ select {
 
 form {
   color:green;
+}
+
+#foto {
+  width: 130px;
 }

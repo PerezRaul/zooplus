@@ -58,36 +58,42 @@ function mostrarDatos(){
 	
 	if (mysqli_num_rows($qDatos)!=0){	
 		while ($mostrarqDatos = mysqli_fetch_array($qDatos)) {
-		echo utf8_encode("<section class='contenedorBusqueda'>						");
-        echo utf8_encode("   <article class='fondoBusqueda'>						");
-        echo utf8_encode("      <ul class='titularBusqueda'>						");
-		echo utf8_encode("			<li>$mostrarqDatos[anu_nom]</li>				");//dato anuncio
-		echo utf8_encode("			<li>$mostrarqDatos[anu_data]</li>				");
-		echo utf8_encode("		</ul>												");
-        echo utf8_encode("        <div class='fotoBusqueda'>						");
-        echo utf8_encode("        	<img src='image/'								");
-        echo utf8_encode("        </div>											");
-        echo utf8_encode("        <div class='datosBusqueda'>						");
-        echo utf8_encode("            <ul class='listaBusqueda'>					");
-        echo utf8_encode("                <li>$mostrarqDatos[anu_contingut]</li>	");
-        echo utf8_encode("                <li>$mostrarqDatos[raca_nom]</li>			");
-        echo utf8_encode("                <li></li>									");
-        echo utf8_encode("                <li></li>									");
-        echo utf8_encode("                <li></li>									");
-        echo utf8_encode("                <li></li>									");
-        echo utf8_encode("            </ul>											");
-        echo utf8_encode("        </div>											");
-        echo utf8_encode("    </article>											");
-        echo utf8_encode("</section>												");
+		echo "<section class='contenedorBusqueda'>";                   
+        echo "   <article class='fondoBusqueda'> ";                       
+        echo "        <div class='titular'>";
+        echo "            <ul class='titularBusqueda'>";
+        echo utf8_encode("    <li id='tData'>$mostrarqDatos[anu_data]</li>");                     
+        echo utf8_encode("    <li id='tNom'>$mostrarqDatos[anu_nom]</li>");                   
+        echo "            </ul> ";
+        echo "        </div>  ";                                         
+        echo "       <div class='fotoBusqueda'>";
 
-
-			/*
-			echo utf8_encode("<br/>");
-			echo utf8_encode("$mostrarqDatos[contact_nom]<br/>");
-			echo utf8_encode("$mostrarqDatos[contact_telf]<br/>");
-			echo utf8_encode("$mostrarqDatos[contact_adre]<br/>");
-			echo utf8_encode("$mostrarqDatos[municipi_nom]<br/>");
-			echo utf8_encode("$mostrarqDatos[anu_tipus]<br/>");*/
+			//mostramos el fichero si existe, sino reemplazamos por uno general
+			$fichero = "fotos/$mostrarqDatos[anu_foto]";
+			if(file_exists($fichero)&&(($mostrarqDatos['anu_foto'])!='')){
+				echo "<img src='$fichero' width='240' heigth='160' /><br/><br/><br/>";
+			} else{
+				echo "<img src='fotos/nofoto.png' width='240' heigth='160' /><br/><br>";
+			}
+                          
+        echo "        </div>";                                            
+        echo "        <div class='datosBusqueda'>";                       
+        echo "            <ul class='listaBusqueda'>";
+        echo utf8_encode("	<li>Estado: $mostrarqDatos[anu_tipus]</li>");                      
+        echo utf8_encode("	<li>Raza: $mostrarqDatos[raca_nom]</li>");    
+        echo utf8_encode("	<li>Contacto:</li>");
+        echo utf8_encode("	<li style='list-style:none;'>$mostrarqDatos[contact_nom]</li>");          
+        echo utf8_encode("	<li style='list-style:none;'>$mostrarqDatos[contact_telf]</li>");                                 
+        echo utf8_encode("  <li style='list-style:none;'>$mostrarqDatos[contact_adre]</li>");                                
+        echo utf8_encode("  <li style='list-style:none;'>$mostrarqDatos[municipi_nom]</li><br/>");                               
+        echo utf8_encode("  <li>Anuncio: $mostrarqDatos[anu_contingut]</li>");                                 
+        echo utf8_encode("</ul> ");                                        
+        echo "        </div>";                                                
+        echo "    </article>";
+        echo "    <div>";
+        echo "        <a href='#top'><img src='image/fondo.gif'/></a>";
+        echo "   </div>  ";                                          
+        echo "</section>";                               
 		}
 	}else{
 		echo utf8_encode("NO HAY DATOS QUE MOSTRAR <br/>");

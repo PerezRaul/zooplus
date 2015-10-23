@@ -9,6 +9,13 @@
     tbl_tipus_animal    tipus_anim_id, tipus_anim_nom
     */
 
+    //CSS MODIFICADO EN EL ARCHIVO   STYLES.CSS
+    
+
+    //LINEA 1107 - CÓDIGO INSERTADO DE BÚSQUEDA POR SELECT
+
+    //LINEA 1353 - CÓDIGO PARA MOSTRAR LOS RESULTADOS DE LA BÚQUEDA
+
     include 'mostrarDatos.php';
 
     $conexion = mysqli_connect('localhost','root','','bd_botiga_animals') or die ('Conexión errónea');
@@ -69,7 +76,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="pragma" content="no-cache">
 <!-- key <shop.codesnippet.maxymiser> not found --><script src="./js/s-code-contents-ee4d6d796de600e0c9db8376f9187896f10241a3.js"></script><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head><body cz-shortcut-listen="true">
-
+<a name="top"> </a>
 <script type="text/javascript">
     <!--// <![CDATA[
     var OA_source = 'HOMEPAGE';
@@ -1139,7 +1146,7 @@ Ofertas del día                            </h3>
         <span style="font-size:18px;color:green"><b>¡Pon tu anuncio!</b></span>
             <div class="full-grey-white-middle" style="border-radius: 6px; width:195px">
                 <div style="padding:0 12px 7px 12px;"><br>
-                    <form name="insertar" id="insertar" action="insertarDatos.php" method="post">
+                    <form name="insertar" id="insertar" action="insertarDatos.php" method="post" enctype="multipart/form-data">
                         <b>Nombre: </b><br />
                         <input type="text" name="nombre" id="name" maxlength="50" required /><br />
                         <b>Teléfono de contacto:</b> <br />
@@ -1179,7 +1186,7 @@ Ofertas del día                            </h3>
                         <b>Descripción del anuncio:</b><br />
                         <textarea type="text" name="contenido" id="contenido" maxlength="150" required></textarea><br /><br />
                         <b>Foto de tu mascota:</b><br />
-                        <input type="file" name="foto" id="foto" value="Inserta tu foto" /><br /><br />
+                        <input type="file" name="foto" id="foto" value="foto" /><br /><br />
                         <input type="submit" name="enviar" value="Enviar" style="margin-left:110px;background-color:green" /><br />
                     </form>
                 </div>

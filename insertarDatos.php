@@ -14,12 +14,16 @@ $idContacte = mysqli_insert_id($con);
 /* Obtener la fecha actual del sistema, para introducirla en el anuncio */
 $fecha = date('Y/m/d');
 
-/* Insertar los datos de titulo, contenido, fecha, foto y tipo del anuncio */
-$InsSQL2 = "INSERT INTO tbl_anunci (anu_contingut, anu_nom, anu_data, raca_id, mun_id, contact_id, anu_tipus) 
-            VALUES ($_REQUEST[contenido], $_REQUEST[titulo], '$fecha', $_REQUEST[raza2], $_REQUEST[municipio2], $idContacte, '$_REQUEST[anuncio2]')";
-mysqli_query($con, $InsSQL2);
+/* Coger la foto insertada en el form y meterla en la variable para insertarla en la base de datos */
+$foto = $_FILES['foto']['name']; 
+$ruta = $_FILES['foto']['tmp_name']; 
+$destino = 'fotos/'.$foto;
+copy($ruta, $destino); 
 
-/* Falta poner anu_foto en el insert de anunci */
+/* Insertar los datos de titulo, contenido, fecha, foto y tipo del anuncio */
+$InsSQL2 = utf8_encode("INSERT INTO tbl_anunci (anu_contingut, anu_nom, anu_data, anu_foto, raca_id, mun_id, contact_id, anu_tipus) 
+            VALUES ($_REQUEST[contenido], $_REQUEST[titulo], '$fecha', '$foto', $_REQUEST[raza2], $_REQUEST[municipio2], $idContacte, '$_REQUEST[anuncio2]')");
+mysqli_query($con, $InsSQL2);
 
 /*echo "<script>alert('¡Tu consulta ha sido satisfactória!')</script>";*/
 
