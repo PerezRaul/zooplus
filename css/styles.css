@@ -1033,3 +1033,7 @@ select {
 form {
   color:green;
 }
+
+#foto {
+  width: 130px;
+}

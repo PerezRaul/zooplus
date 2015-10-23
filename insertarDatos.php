@@ -15,18 +15,15 @@ $idContacte = mysqli_insert_id($con);
 $fecha = date('Y/m/d');
 
 /* Coger la foto insertada en el form y meterla en la variable para insertarla en la base de datos */
-
 $foto = $_FILES['foto']['name']; 
 $ruta = $_FILES['foto']['tmp_name']; 
 $destino = 'fotos/'.$foto;
 copy($ruta, $destino); 
 
 /* Insertar los datos de titulo, contenido, fecha, foto y tipo del anuncio */
-$InsSQL2 = "INSERT INTO tbl_anunci (anu_contingut, anu_nom, anu_data, anu_foto, raca_id, mun_id, contact_id, anu_tipus) 
-            VALUES ($_REQUEST[contenido], $_REQUEST[titulo], '$fecha', '$foto', $_REQUEST[raza2], $_REQUEST[municipio2], $idContacte, '$_REQUEST[anuncio2]')";
+$InsSQL2 = utf8_encode("INSERT INTO tbl_anunci (anu_contingut, anu_nom, anu_data, anu_foto, raca_id, mun_id, contact_id, anu_tipus) 
+            VALUES ($_REQUEST[contenido], $_REQUEST[titulo], '$fecha', '$foto', $_REQUEST[raza2], $_REQUEST[municipio2], $idContacte, '$_REQUEST[anuncio2]')");
 mysqli_query($con, $InsSQL2);
-
-/* Falta poner anu_foto en el insert de anunci */
 
 /*echo "<script>alert('¡Tu consulta ha sido satisfactória!')</script>";*/
 

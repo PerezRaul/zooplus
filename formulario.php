@@ -1179,7 +1179,7 @@ Ofertas del día                            </h3>
                         <b>Descripción del anuncio:</b><br />
                         <textarea type="text" name="contenido" id="contenido" maxlength="150" required></textarea><br /><br />
                         <b>Foto de tu mascota:</b><br />
-                        <input type="file" name="foto" id="foto" /><br /><br />
+                        <input type="file" name="foto" id="foto" value="foto" /><br /><br />
                         <input type="submit" name="enviar" value="Enviar" style="margin-left:110px;background-color:green" /><br />
                     </form>
                 </div>

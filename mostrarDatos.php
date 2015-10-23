@@ -67,6 +67,12 @@ function mostrarDatos(){
 			echo utf8_encode("$mostrarqDatos[contact_adre]<br/>");
 			echo utf8_encode("$mostrarqDatos[municipi_nom]<br/>");
 			echo utf8_encode("$mostrarqDatos[raca_nom]<br/><br/>");
+			$fichero = "fotos/$mostrarqDatos[anu_foto]";
+			if(file_exists($fichero)&&(($mostrarqDatos['anu_foto'])!='')){
+				echo "<img src='$fichero' width='240' heigth='160' /><br/><br/><br/>";
+			} else{
+				echo "<img src='fotos/nofoto.png' width='240' heigth='160' /><br/><br>";
+			}
 		}
 	}else{
 		echo utf8_encode("NO HAY DATOS QUE MOSTRAR <br/>");
