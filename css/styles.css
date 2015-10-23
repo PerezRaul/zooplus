@@ -9,6 +9,51 @@
 
 }
 
+.fondoBusqueda{
+  width: 100%;
+  height: 210px;
+}
+
+  #tData{
+    color: white;
+    font-size: 20px;
+
+  }
+
+  #tNom{
+    color: #f80;
+    font-size: 15px;
+  }
+
+.titular{
+  margin: 0;
+  background-color: green;
+}
+
+.titularBusqueda{
+  list-style: none;
+  font-weight: bolder;
+  padding-left: 5px;
+}
+
+.titularBusqueda li{
+  display: inline-block;
+}
+
+.fotoBusqueda{
+  float: left;
+  padding-right: 30px;
+}
+
+.fotoBusqueda img{
+  width: 240px;
+  height: 160px;
+}
+
+.bottomBusqueda{
+  background-image: url(../image/table.gif);
+}
+
 /* customized screen sizes (used for media queries) */
 /* brand Z+ colors */
 /* gradient colors */

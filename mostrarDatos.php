@@ -58,15 +58,36 @@ function mostrarDatos(){
 	
 	if (mysqli_num_rows($qDatos)!=0){	
 		while ($mostrarqDatos = mysqli_fetch_array($qDatos)) {
-			echo utf8_encode("$mostrarqDatos[anu_data]<br/>");
-			echo utf8_encode("$mostrarqDatos[anu_tipus]<br/>");
-			echo utf8_encode("$mostrarqDatos[anu_nom]<br/>");
-			echo utf8_encode("$mostrarqDatos[anu_contingut]<br/>");
+		echo utf8_encode("<section class='contenedorBusqueda'>						");
+        echo utf8_encode("   <article class='fondoBusqueda'>						");
+        echo utf8_encode("      <ul class='titularBusqueda'>						");
+		echo utf8_encode("			<li>$mostrarqDatos[anu_nom]</li>				");//dato anuncio
+		echo utf8_encode("			<li>$mostrarqDatos[anu_data]</li>				");
+		echo utf8_encode("		</ul>												");
+        echo utf8_encode("        <div class='fotoBusqueda'>						");
+        echo utf8_encode("        	<img src='image/'								");
+        echo utf8_encode("        </div>											");
+        echo utf8_encode("        <div class='datosBusqueda'>						");
+        echo utf8_encode("            <ul class='listaBusqueda'>					");
+        echo utf8_encode("                <li>$mostrarqDatos[anu_contingut]</li>	");
+        echo utf8_encode("                <li>$mostrarqDatos[raca_nom]</li>			");
+        echo utf8_encode("                <li></li>									");
+        echo utf8_encode("                <li></li>									");
+        echo utf8_encode("                <li></li>									");
+        echo utf8_encode("                <li></li>									");
+        echo utf8_encode("            </ul>											");
+        echo utf8_encode("        </div>											");
+        echo utf8_encode("    </article>											");
+        echo utf8_encode("</section>												");
+
+
+			/*
+			echo utf8_encode("<br/>");
 			echo utf8_encode("$mostrarqDatos[contact_nom]<br/>");
 			echo utf8_encode("$mostrarqDatos[contact_telf]<br/>");
 			echo utf8_encode("$mostrarqDatos[contact_adre]<br/>");
 			echo utf8_encode("$mostrarqDatos[municipi_nom]<br/>");
-			echo utf8_encode("$mostrarqDatos[raca_nom]<br/><br/>");
+			echo utf8_encode("$mostrarqDatos[anu_tipus]<br/>");*/
 		}
 	}else{
 		echo utf8_encode("NO HAY DATOS QUE MOSTRAR <br/>");
@@ -74,48 +95,4 @@ function mostrarDatos(){
 		
 }
 
-
-/*
-echo '		<table border="0" cellspacing="0" cellpadding="2" width="752" id="product-list">';
-echo '				 <tbody class="products-header">';
-echo '					<tr class="boldtitle">';
-echo '						<td class="shopRowHeaderBlack" colspan="2">';                                    
-echo '							<a name=""></a>Acuarios para cría de peces JBL: de calidad';
-echo '			            </td>';
-echo '			            <td class="shopRowHeaderBlack" align="center"></td>';
-echo '				</tbody>';
-echo '				<tbody class="product-variants-list">';
-echo '					<tr>';
-echo '						<td class="product-image" rowspan="4" align="center" valign="top">';
-echo '							<a class="offerList image" href="/shop/tienda_peces/acuario/crianza/jbl_acuarios_para_la_cria_de_peces/174838" title="Set para el cultivo de nauplios de artemia JBL">';
-echo '								<img class="productlist" src="//media.zooplus.com/bilder/set/para/el/cultivo/de/nauplios/de/artemia/jbl/1/140/lp_22121_jbl_artemioset_1.jpg" border="0" alt="Set para el cultivo de nauplios de artemia JBL">';
-echo '								<span class="caption">Más fotos (2)</span>';
-echo '							</a>';
-echo '						</td>';
-echo '					</tr>';
-echo '					<tr style="background-color:#ffffff;" class="text">';
-echo '						<td valign="middle" colspan="6">';
-echo '							<a class="follow3 product__title" href="/shop/tienda_peces/acuario/crianza/jbl_acuarios_para_la_cria_de_peces/174838" title="Set para el cultivo de nauplios de artemia JBL">';
-echo '								<b>Set para el cultivo de nauplios de artemia JBL</b>';
-echo '							</a>';
-echo '						</td>';
-echo '					</tr>';
-echo '					<tr style="background-color:#ffffff;" class="text">';
-echo '						<td colspan="6">';
-echo '							<div class="best__readable">Este acuario está ideado para la crianza de nauplios de artemia. Los nauplios son la comida más adecuada para muchas especies de peces y crustáceos en estadios post-larvarios.</div>';
-echo '							<p class="delivery-time-ct"></p>';
-echo '						</td>';
-echo '					</tr>';
-echo '				</tbody>';
-echo '			    <tbody class="products-footer">';
-echo '			        <tr>';
-echo '				        <td colspan="6" height="15" valign="top">';
-echo '					        <a href="#top">';
-echo '					        	<img border="0" title="Top" alt="Top" src="image/table_top.gif">';
-echo '					        </a>';
-echo '				        </td>';
-echo '			        </tr>';
-echo '			    </tbody>'; 
-echo '			</table>';
-
-?>*/
+?>
