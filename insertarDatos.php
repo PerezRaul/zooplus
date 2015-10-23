@@ -5,8 +5,8 @@ $con = mysqli_connect('localhost','root','','bd_botiga_animals') or die ('Conexi
 
 /* Insertar los datos de nombre, telefono y dirección */
 $InsSQL = "INSERT INTO tbl_contacte (contact_nom, contact_telf, contact_adre) 
-           VALUES ($_REQUEST[nombre], $_REQUEST[telefono], $_REQUEST[direccion])";
-mysqli_query($con, $InsSQL);
+           VALUES ('$_REQUEST[nombre]', '$_REQUEST[telefono]', '$_REQUEST[direccion]')";
+mysqli_query($con, utf8_decode($InsSQL));
 
 /* Coger la id de contacto para meterla en la consulta de anuncios */
 $idContacte = mysqli_insert_id($con);
@@ -21,11 +21,13 @@ $destino = 'fotos/'.$foto;
 copy($ruta, $destino); 
 
 /* Insertar los datos de titulo, contenido, fecha, foto y tipo del anuncio */
-$InsSQL2 = utf8_encode("INSERT INTO tbl_anunci (anu_contingut, anu_nom, anu_data, anu_foto, raca_id, mun_id, contact_id, anu_tipus) 
-            VALUES ($_REQUEST[contenido], $_REQUEST[titulo], '$fecha', '$foto', $_REQUEST[raza2], $_REQUEST[municipio2], $idContacte, '$_REQUEST[anuncio2]')");
-mysqli_query($con, $InsSQL2);
+$InsSQL2 = "INSERT INTO tbl_anunci (anu_contingut, anu_nom, anu_data, anu_foto, raca_id, mun_id, contact_id, anu_tipus) 
+            VALUES ('$_REQUEST[contenido]', '$_REQUEST[titulo]', '$fecha', '$foto', $_REQUEST[raza2], $_REQUEST[municipio2], $idContacte, '$_REQUEST[anuncio2]')";
+mysqli_query($con, utf8_decode($InsSQL2));
 
-/*echo "<script>alert('¡Tu consulta ha sido satisfactória!')</script>";*/
+/*echo "<script type='text/javascript'>alert('¡Tu consulta ha sido satisfactória!')</script>";*/
+
+mysqli_close($con);
 
 header("Location: formulario.php");
 

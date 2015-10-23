@@ -1505,4 +1505,9 @@ if (navigator.userAgent.toLowerCase().indexOf('gomez') < 0) {
 <script type="text/javascript"> 
 _satellite.pageBottom(); 
 </script>
-<a rel="ms-main-history" id="_mainsearch" href="http://www.zooplus.es/#" style="opacity:0;font-size:1px;">.</a><div id="window-resizer-tooltip" style="display: none;"><a href="http://www.zooplus.es/#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1366</span> x <span class="tooltipHeight" id="winHeight">738</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1366</span> x <span class="tooltipHeight" id="vpHeight">609</span></div></body></html>
+<a rel="ms-main-history" id="_mainsearch" href="http://www.zooplus.es/#" style="opacity:0;font-size:1px;">.</a><div id="window-resizer-tooltip" style="display: none;"><a href="http://www.zooplus.es/#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1366</span> x <span class="tooltipHeight" id="winHeight">738</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1366</span> x <span class="tooltipHeight" id="vpHeight">609</span></div>
+<?php 
+    mysqli_close($conexion);
+?>
+    </body>
+</html>
